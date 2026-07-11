@@ -1,0 +1,1576 @@
+// ============================================================
+//  জামালপুর সেন্ট্রাল হাসপাতাল লিমিটেড
+//  data.js — সমস্ত তথ্য এখানে সংরক্ষিত
+//  Future additions: just add new entries to the arrays below.
+// ============================================================
+
+const HOSPITAL = {
+  name: "জামালপুর সেন্ট্রাল হাসপাতাল লিমিটেড",
+  tagline: "রোগ অনুযায়ী সঠিক ডাক্তার খুঁজুন",
+  phone: "",
+  address: "আমলাপাড়া, জামালপুর সদর, জামালপুর।",
+  emergency: ""
+};
+
+// ─────────────────────────────────────────────
+//  DEPARTMENTS
+// ─────────────────────────────────────────────
+const DEPARTMENTS = [
+  { id: "neuro",       name: "নিউরোমেডিসিন",         icon: "" },
+  { id: "ent",         name: "নাক-কান-গলা (ENT)",     icon: "" },
+  { id: "dental",      name: "দন্ত",            icon: "" },
+  { id: "cardio",      name: "হৃদরোগ",          icon: "" },
+  { id: "pulmo",       name: "বক্ষব্যাধি",       icon: "" },
+  { id: "gastro",      name: "গ্যাস্ট্রোএন্টারোলজি",   icon: "" },
+  { id: "hepato",      name: "হেপাটোলজি (লিভার)",     icon: "" },
+  { id: "nephro",      name: "নেফ্রোলজি (কিডনি)",     icon: "" },
+  { id: "uro",         name: "ইউরোলজি",               icon: "" },
+  { id: "gynae",       name: "স্ত্রীরোগ ও প্রসূতি",    icon: "" },
+  { id: "ortho",       name: "অর্থোপেডিক্স",           icon: "" },
+  { id: "dermo",       name: "চর্মরোগ",          icon: "" },
+  { id: "endo",        name: "এন্ডোক্রাইনোলজি",       icon: "" },
+  { id: "pediatric",   name: "শিশু",             icon: "" },
+  { id: "child-surgery",   name: "শিশু সার্জারি",             icon: "" },
+  { id: "medicine",    name: "মেডিসিন",          icon: "" },
+  { id: "psychiatry",  name: "মানসিক রোগ",       icon: "" },
+  { id: "surgery",     name: "সার্জারি",          icon: "" },
+  { id: "thyroid",     name: "থাইরয়েড",         icon: "" },
+  { id: "pathology",     name: "প্যাথলজি",         icon: "" },
+  { id: "radiology",     name: "রেডিওলজি",         icon: "" },
+];
+
+// ─────────────────────────────────────────────
+//  DOCTORS
+// ─────────────────────────────────────────────
+const DOCTORS = [
+
+{
+  id: "d01",
+  name: "অধ্যাপক ডাঃ খাজা মাসুম কবীর",
+  photo: "assests/d01.png",
+  designation: "প্রফেসর (সার্জারি)",
+  departments: "surgery",
+  degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য), এফসিপিএস (সার্জারি)
+এমএস (ইউরোলজি)
+অধ্যাপক (সার্জাারি)
+শহিদ সৈয়দ নজরুল ইসলাম মেডিকেল কলেজ ও হাসপাতাল, কিশোরগঞ্জ`,
+  diseases: [
+    "dis434", "dis435", "dis436", "dis437", "dis438", "dis439", "dis440", "dis441", "dis442", "dis443", "dis444", "dis445", "dis446", "dis447", "dis448", "dis449", "dis450", "dis451", "dis452", "dis453", "dis454", "dis455", "dis456", "dis457", "dis458", "dis459", "dis460"],
+  schedule: [
+    { day: "শনি - সোমবার", time: "বিকাল ৫:০০ টা – রাত ১০:০০ টা" }
+  ],
+  chamber: "২০২",
+  visitFee: {
+  new: "১০০০",
+  old: "৮০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d02",
+  name: "ডাঃ মোহাম্মদ শফিকুল্লাহ আকবর",
+  photo: "assests/d02.png",
+  designation: "সহযোগী অধ্যাপক (মেডিসিন)",
+  departments: "medicine",
+  degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
+এফসিপিএস (মেডিসিন)
+সহযোগী অধ্যাপক (মেডিসিন)
+জামালপুর মেডিকেল কলেজ হাসপাতাল`,
+  diseases: [
+    "dis379", "dis380", "dis381", "dis382", "dis383", "dis384", "dis385", "dis386", "dis387", "dis388", "dis389", "dis390", "dis391", "dis392", "dis393", "dis394", "dis395", "dis396", "dis397", "dis398", "dis399", "dis400", "dis401", "dis402", "dis403", "dis404", "dis405", "dis406", "dis407", "dis408"],
+  schedule: [
+    { day: "শুক্রবার", time: "সকাল ১০ টা – রাত ৮ টা পর্যন্ত" },
+    { day: "শনিবার", time: "বিকাল ৩ টা – রাত ৮ টা পর্যন্ত" }
+  ],
+  chamber: "২০১",
+  visitFee: {
+  new: "৮০০",
+  old: "৬০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d03",
+  name: "ডাঃ মোঃ হারুন-অর-রশিদ",
+  photo: "assests/d03.png",
+  designation: "সহকারী অধ্যাপক (ইএনটি)",
+  departments: "ent",
+  degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
+ডিএলও (বিএসএমএমইউ)
+সহকারী অধ্যাপক (ইএনটি)
+জামালপুর মেডিকেল কজেল হাসপাতাল`,
+  diseases: [
+    "dis31", "dis32", "dis33", "dis34", "dis35", "dis36", "dis37", "dis38", "dis39", "dis40", "dis41", "dis42", "dis43", "dis44", "dis45", "dis46", "dis47", "dis48", "dis49", "dis50", "dis51", "dis52", "dis53", "dis54", "dis55", "dis56", "dis57", "dis58"],
+  schedule: [
+    { day: "শনি - সোমবার", time: "বিকাল ৩ টা – রাত ৮ টা পর্যন্ত" },
+    { day: "শুক্রবার", time: "দুপুর ১২ টা – বিকাল ৫ টা পর্যন্ত" },
+  ],
+  chamber: "২০৭",
+  visitFee: {
+  new: "৬০০",
+  old: "৪০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d04",
+  name: "ডাঃ ইসরাত জাহান চৌধুরী",
+  photo: "assests/d04.png",
+  designation: "চর্ম, এলার্জি ও যৌন রোগ বিশেষজ্ঞ",
+  departments: "dermo",
+  degrees: `এমবিবিএস (সিএমসি), বিসিএস (স্বাস্থ্য)
+ডিডিভি (ডার্মাটোলজি)
+জামালপুর মেডিকেল কলেজ হাসপাতাল`,
+  diseases: [
+    "dis289", "dis290", "dis291", "dis292", "dis293", "dis294", "dis295", "dis296", "dis297", "dis298", "dis299", "dis300", "dis301", "dis302", "dis303", "dis304", "dis305", "dis306", "dis307", "dis308", "dis309", "dis310", "dis311", "dis312", "dis313", "dis314", "dis315", "dis316", "dis317", "dis318"],
+  schedule: [
+    { day: "শুক্র ও শনিবার", time: "বিকাল ৩ টা – রাত ৮ টা পর্যন্ত" },
+  ],
+  chamber: "২০৩",
+  visitFee: {
+  new: "৭০০",
+  old: "৫০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d05",
+  name: "ডাঃ আসমা সরকার সূচনা",
+  photo: "assests/d05.png",
+  designation: "সহকারী অধ্যাপক (গাইনী-অবস্)",
+  departments: "gynae",
+  degrees: `এমবিবিএস, এফসিপিএস (গাইনী-অবস্)
+সহকারী অধ্যাপক (গাইনী-অবস্)
+জামালপুর মেডিকেল কলেজ হাসপাতাল`,
+  diseases: [
+    "dis228", "dis229", "dis230", "dis231", "dis232", "dis233", "dis234", "dis235", "dis236", "dis237", "dis238", "dis239", "dis240", "dis241", "dis242", "dis243", "dis244", "dis245", "dis246", "dis247", "dis248", "dis249", "dis250", "dis251", "dis252", "dis253", "dis254", "dis255", "dis256", "dis257"],
+  schedule: [
+    { day: "শনি - বৃহস্পতিবার", time: "বিকাল ৩ টা – রাত ৮ টা পর্যন্ত" },
+    { day: "শুক্রবার", time: "সকাল ১১ টা – রাত ৮ টা পর্যন্ত" }
+  ],
+  chamber: "২০৪",
+  visitFee: {
+  new: "৮০০",
+  old: "৬০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d06",
+  name: "ডাঃ মোঃ মুর্শিদুল হক",
+  photo: "assests/d06.png",
+  designation: "সহকারী অধ্যাপক (অর্থো-সার্জারি)",
+  departments: "ortho",
+  degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
+ডি-অর্থো (অর্থো-সার্জারি)
+সহকারী অধ্যাপক (অর্থো-সার্জারি)
+২৫০ শয্যা জেনারেল হাসপাতাল, জামালপুর`,
+  diseases: [
+    "dis258", "dis259", "dis260", "dis261", "dis262", "dis263", "dis264", "dis265", "dis266", "dis267", "dis268", "dis269", "dis270", "dis271", "dis272", "dis273", "dis274", "dis275", "dis276", "dis277", "dis278", "dis279", "dis280", "dis281", "dis282", "dis283", "dis284", "dis285", "dis286", "dis287"],
+  schedule: [
+    { day: "শনি - বৃহস্পতিবার", time: "বিকাল ৩ টা – রাত ৮ টা পর্যন্ত" },
+  ],
+  chamber: "১০৫",
+  visitFee: {
+  new: "৭০০",
+  old: "৫০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d07",
+  name: "ডাঃ মোঃ মঞ্জুরুল হক",
+  photo: "assests/d07.png",
+  designation: "সহকারী অধ্যাপক (গ্যাস্ট্রোএন্টারোলজি)",
+  departments: ["gastro", "hepato"],
+  degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
+এমডি (গ্যাস্ট্রোএন্টারোলজি), বিএসএমএমইউ
+এমএসিজি (আমেরিকা), এমআরসিপি (পার্ট-১) ইউকে
+সহকারী অধ্যাপক (গ্যাস্ট্রোএন্টারোলজি)
+জামালপুর মেডিকেল কলেজ হাসপাতাল`,
+  diseases: [
+    "dis118", "dis119", "dis120", "dis121", "dis122", "dis123", "dis124", "dis125", "dis126", "dis127", "dis128", "dis129", "dis130", "dis131", "dis132", "dis133", "dis134", "dis135", "dis136", "dis137", "dis138", "dis139", "dis140", "dis141", "dis142", "dis143", "dis144", "dis145", "dis146", "dis147"],
+  schedule: [
+    { day: "শনি, রবি, সোম ও বুধবার", time: "বিকাল ৩ টা – রাত ৮ টা পর্যন্ত" },
+    { day: "মঙ্গলবার ও শুক্রবার", time: "বিকাল ৫ টা – রাত ৮ টা পর্যন্ত" }
+  ],
+  chamber: "২১০",
+  visitFee: {
+  new: "৮০০",
+  old: "৬০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d08",
+  name: "ডাঃ মোঃ ফজলুল কারীম",
+  photo: "assests/d08.png",
+  designation: "সহযোগী অধ্যাপক (কার্ডিওলজি)",
+  departments: "cardio",
+  degrees: `এমবিবিএস, এমসিপিএস (মেডিসিন)
+এমডি (কার্ডিওলজি)
+সহযোগী অধ্যাপক (কার্ডিওলজি)
+জামালপুর মেডিকেল কলেজ হাসপাতাল`,
+  diseases: [
+    "dis078", "dis79", "dis80", "dis81", "dis82", "dis83", "dis84", "dis85", "dis86", "dis87", "dis88", "dis89", "dis90", "dis91", "dis92", "dis93", "dis94", "dis95", "dis96", "dis97"],
+  schedule: [
+    { day: "শনি - বৃহস্পতিবার", time: "বিকাল ৩ টা – রাত ৮ টা পর্যন্ত" },
+    { day: "শুক্রবার", time: "সকাল ১১ টা – রাত ৮ টা পর্যন্ত" }
+  ],
+  chamber: "২০৫",
+  visitFee: {
+  new: "৮০০",
+  old: "৬০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d09",
+  name: "ডাঃ আঞ্জুমান আরা",
+  photo: "assests/d09.png",
+  designation: "সহকারী অধ্যাপক",
+  departments: "pediatric",
+  degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
+এমডি (শিশু)
+সহকারী অধ্যাপক
+জামালপুর মেডিকেল কলেজ হাসপাতাল`,
+  diseases: [
+    "dis349", "dis350", "dis351", "dis352", "dis353", "dis354", "dis355", "dis356", "dis357", "dis358", "dis359", "dis360", "dis361", "dis362", "dis363", "dis364", "dis365", "dis366", "dis367", "dis368", "dis369", "dis370", "dis371", "dis372", "dis373", "dis374", "dis375", "dis376", "dis377", "dis378"],
+    schedule: [
+    { day: "প্রতিদিন", time: "বিকাল ৪ – সন্ধ্যা ৭ টা পর্যন্ত" }
+  ],
+  chamber: "৫০১",
+  visitFee: {
+  new: "৬০০",
+  old: "৪০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d10",
+  name: "ডাঃ মোঃ তাজুল ইসলাম",
+  photo: "assests/d10.png",
+  designation: "সহযোগী অধ্যাপক (শিশু)",
+  departments: "pediatric",
+  degrees: `এমবিবিএস, এফসিপিএস (শিশু)
+সহযোগী অধ্যাপক (শিশু)
+জামালপুর মেডিকেল কলেজ হাসপাতাল`,
+  diseases: [
+    "dis349", "dis350", "dis351", "dis352", "dis353", "dis354", "dis355", "dis356", "dis357", "dis358", "dis359", "dis360", "dis361", "dis362", "dis363", "dis364", "dis365", "dis366", "dis367", "dis368", "dis369", "dis370", "dis371", "dis372", "dis373", "dis374", "dis375", "dis376", "dis377", "dis378"],
+  schedule: [
+    { day: "শনি - বৃহস্পতিবার", time: "সন্ধ্যা ৭ টা – রাত ৯ টা পর্যন্ত" },
+    { day: "শুক্রবার", time: "বিকাল ৫ টা – রাত ৮ টা পর্যন্ত" }
+  ],
+  chamber: "৫০১",
+  visitFee: {
+  new: "৮০০",
+  old: "৬০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d11",
+  name: "ডাঃ মুহাম্মদ মাহমুদুল হাসান (বিপ্লব)",
+  photo: "assests/d11.png",
+  designation: "সহকারী অধ্যাপক (রেসপিরেটরী মেডিসিন)",
+  departments: "pulmo",
+  degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
+ডিটিসিডি, সিসিডি (বারডেম)
+সহকারী অধ্যাপক (রেসপিরেটরী মেডিসিন)
+জামালপুর মেডিকেল কলেজ হাসপাতাল`,
+  diseases: [
+    "dis98", "dis99", "dis100", "dis101", "dis102", "dis103", "dis104", "dis105", "dis106", "dis107", "dis108", "dis109", "dis110", "dis111", "dis112", "dis113", "dis114", "dis115", "dis116", "dis117"],
+  schedule: [
+    { day: "প্রতিদিন", time: "বিকাল ৩ টা – রাত ৮ টা পর্যন্ত" }
+  ],
+  chamber: "২০৬",
+  visitFee: {
+  new: "৭০০",
+  old: "৫০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d12",
+  name: "ডাঃ এস ডি তিথি",
+  photo: "assests/d12.png",
+  designation: "ওরাল এন্ড মেক্সিলোফেসিয়াল সার্জন",
+  departments: "dental",
+  degrees: `বিডিএস, পিজিটি (কনজারভেটিভ বিএসএমএমইউ)
+পিজিটি (ওরাল এন্ড মেক্সিলোফেসিয়াল সার্জন)
+সিপিআর (ঢাকা মেডিকেল কলেজ হাসপাতাল)
+ওরাল এন্ড মেক্সিলোফেসিয়াল সার্জন`,
+  diseases: [
+    "dis59", "dis60", "dis61", "dis62", "dis63", "dis64", "dis65", "dis66", "dis67", "dis68", "dis69", "dis70", "dis71", "dis72", "dis73", "dis74", "dis75", "dis76", "dis77", "dis78"],
+  schedule: [
+    { day: "প্রতিদিন", time: "বিকাল ৩ টা – রাত ৮ টা পর্যন্ত" }
+  ],
+  chamber: "৫০৩",
+  visitFee: {
+  new: "৭০০",
+  old: "৫০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d13",
+  name: "ডাঃ মোঃ সাদিকুর রহমান (জামিল)",
+  photo: "assests/d13.png",
+  designation: "মেডিসিন বিশেষজ্ঞ ও কনসালটেন্ট",
+  departments: "medicine",
+  degrees: `এমবিবিএস (ঢাকা), বিসিএস (স্বাস্থ্য)
+এমসিপিএস (মেডিসিন), এফসিপিএস (মেডিসিন) এফপি
+এমডি (ইন্টারনাল মেডিসিন)
+বাংলাদেশ মেডিকেল বিশ্ববিদ্যালয় (পিজি হাসপাতাল), ঢাকা
+মেডিসিন বিশেষজ্ঞ ও কনসালটেন্ট
+জামালপুর মেডিকেল কলেজ হাসপাতাল`,
+  diseases: [
+    "dis379", "dis380", "dis381", "dis382", "dis383", "dis384", "dis385", "dis386", "dis387", "dis388", "dis389", "dis390", "dis391", "dis392", "dis393", "dis394", "dis395", "dis396", "dis397", "dis398", "dis399", "dis400", "dis401", "dis402", "dis403", "dis404", "dis405", "dis406", "dis407", "dis408"],
+  schedule: [
+    { day: "রবি, মঙ্গল ও বৃহস্পতিবার", time: "বিকাল ৩ টা – সন্ধ্যা ৬ টা পর্যন্ত" }
+  ],
+  chamber: "২০১",
+  visitFee: {
+  new: "৭০০",
+  old: "৫০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d14",
+  name: "ডাঃ মোঃ ইসমাইল হোসেন",
+  photo: "assests/d14.png",
+  designation: "সিনিয়র কনসালটেন্ট (চর্ম ও যৌন)",
+  departments: "dermo",
+  degrees: `এমবিবিএস, ডিডিভি (পিজি হাসপাতাল)
+এমপিএইচ (এইচএম)
+সিনিয়র কনসালটেন্ট (চর্ম ও যৌন)
+২৫০ শয্যা জেনারেল হাসপাতাল, জামালপুর`,
+  diseases: [
+    "dis289", "dis290", "dis291", "dis292", "dis293", "dis294", "dis295", "dis296", "dis297", "dis298", "dis299", "dis300", "dis301", "dis302", "dis303", "dis304", "dis305", "dis306", "dis307", "dis308", "dis309", "dis310", "dis311", "dis312", "dis313", "dis314", "dis315", "dis316", "dis317", "dis318"],
+  schedule: [
+    { day: "রবি - বৃহস্পতিবার", time: "বিকাল ৩ টা – রাত ৮ টা পর্যন্ত" }
+  ],
+  chamber: "২০৩",
+  visitFee: {
+  new: "৮০০",
+  old: "৫০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d15",
+  name: "ডাঃ মোঃ নাজমুস সাদাত",
+  photo: "assests/d15.png",
+  designation: "নিউরোমেডিসিন বিশেষজ্ঞ",
+  departments: "neuro",
+  degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
+এমডি (নিউরোলজি), সিসিডি (বারডেম)
+নিউরোমেডিসিন বিশেষজ্ঞ
+ময়মনসিংহ মেডিকেল কলেজ ও হাসপাতাল`,
+  diseases: [
+    "dis01", "dis02", "dis03", "dis04", "dis05", "dis06", "dis07", "dis08", "dis09", "dis10", "dis11", "dis12", "dis13", "dis14", "dis15", "dis16", "dis17", "dis18", "dis19", "dis20", "dis21", "dis22", "dis23", "dis24", "dis25", "dis26", "dis27", "dis28", "dis29", "dis30"],
+  schedule: [
+    { day: "সোমবার", time: "বিকাল ৩ টা – রাত ৮ টা পর্যন্ত" }
+  ],
+  chamber: "২০২",
+  visitFee: {
+  new: "৭০০",
+  old: "৫০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d16",
+  name: "ডাঃ পলাশ দত্ত",
+  photo: "assests/d16.png",
+  designation: "মেডিসিন, কিডনি রোগ বিশেষজ্ঞ ও ডায়াবেটোলজিস্ট",
+  departments: "nephro",
+  degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
+এমডি (নেফ্রোলজি), সিসিডি (বারডেম)
+এফসিপিএস (মেডিসিন)
+পিজিটি (হৃদরোগ, নিউরোমেডিসিন)
+মেডিসিন, কিডনি রোগ বিশেষজ্ঞ ও ডায়াবেটোলজিস্ট
+জামালপুর মেডিকেল কলেজ হাসপাতাল`,
+  diseases: [
+    "dis173", "dis174", "dis175", "dis176", "dis177", "dis178", "dis179", "dis180", "dis181", "dis182", "dis183", "dis184", "dis185", "dis186", "dis187", "dis188", "dis189", "dis190", "dis191", "dis192", "dis193", "dis194", "dis195", "dis196", "dis197"],
+  schedule: [
+    { day: "সোমবার", time: "বিকাল ৩ টা – সন্ধ্যা ৬ টা পর্যন্ত" }
+  ],
+  chamber: "২০১",
+  visitFee: {
+  new: "৭০০",
+  old: "৫০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d17",
+  name: "ডাঃ মাহফুজ আলম খান (রাতুল)",
+  photo: "assests/d17.png",
+  designation: "সহকারী অধ্যাপক (শিশু সার্জারি)",
+  departments: "child-surgery",
+  degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
+এমএস (শিশু সার্জারি), বিএসএমএমইউ
+সহকারী অধ্যাপক (শিশু সার্জারি)
+জামালপুর মেডিকেল কলেজ হাসপাতাল`,
+  diseases: [
+    "dis481", "dis482", "dis483", "dis484", "dis485", "dis486", "dis487", "dis488", "dis489", "dis490", "dis491", "dis492", "dis493", "dis494", "dis495", "dis496", "dis497", "dis498", "dis499", "dis500", "dis501", "dis502", "dis503", "dis504", "dis505", "dis506", "dis507", "dis508", "dis509", "dis510"],
+  schedule: [
+    { day: "মঙ্গলবার", time: "বিকাল ৩ টা – রাত ৮ টা পর্যন্ত" }
+  ],
+  chamber: "২০২",
+  visitFee: {
+  new: "৭০০",
+  old: "৫০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d18",
+  name: "অধ্যাপক ডাঃ মোঃ গোলাম রব্বানী",
+  photo: "assests/d18.png",
+  designation: "অধ্যাপক ও বিভাগীয় প্রধান, কিডনি রোগ বিভাগ",
+  departments: "nephro",
+  degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
+এমপিএইচ (বিএসএমএমইউ)
+এমএসিপি (মেডিসিন-আমেরিকা)
+অধ্যাপক ও বিভাগীয় প্রধান
+কিডনি রোগ বিভাগ
+ময়মনসিংহ মেডিকেল কলেজ ও হাসপাতাল`,
+  diseases: [
+    "dis173", "dis174", "dis175", "dis176", "dis177", "dis178", "dis179", "dis180", "dis181", "dis182", "dis183", "dis184", "dis185", "dis186", "dis187", "dis188", "dis189", "dis190", "dis191", "dis192", "dis193", "dis194", "dis195", "dis196", "dis197"],
+  schedule: [
+    { day: "বুধবার", time: "সকাল ১০ টা – বিকাল ৫ টা পর্যন্ত" }
+  ],
+  chamber: "২০২",
+  visitFee: {
+  new: "১০০০",
+  old: "৮০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d19",
+  name: "ডাঃ মোঃ নূর নবী সিদ্দিকী",
+  photo: "assests/d19.png",
+  designation: "কনসালটেন্ট সার্জন",
+  departments: ["surgery"],
+  degrees: `এমবিবিএস, সিসিডি (বারডেম)
+এফসিপিএস (সার্জারি)
+২৫ তম বিসিএস (স্বাস্থ্য)
+কনসালটেন্ট সার্জন
+(প্রাত্তন) ময়মনসিংহ মেডিকেল কলেজ হাসপাতাল`,
+  diseases: [
+    "dis434", "dis435", "dis436", "dis437", "dis438", "dis439", "dis440", "dis441", "dis442", "dis443", "dis444", "dis445", "dis446", "dis447", "dis448", "dis449", "dis450", "dis451", "dis452", "dis453", "dis454", "dis455", "dis456", "dis457", "dis458", "dis459", "dis460"],
+  schedule: [
+    { day: "বৃহস্পতিবার ও শুক্রবার", time: "বিকাল ৩ টা – সন্ধ্যা ৬ টা পর্যন্ত" }
+  ],
+  chamber: "২০৬",
+  visitFee: {
+  new: "৭০০",
+  old: "৫০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d20",
+  name: "ডাঃ আব্দুল্লাহ আল রাগীব",
+  photo: "assests/d20.png",
+  designation: "থাইরয়েড, হরমোন অভিজ্ঞ ও ডায়াবেটোলজিস্ট",
+  departments: ["thyroid", "endo"],
+  degrees: `এমবিবিএস, সিসিডি (বারডেম), ডি.ই.এম (ইন কোর্স)
+থাইরয়েড, হরমোন ও ডায়াবেটিস বিভাগ
+ময়মনসিংহ মেডিকেল কলেজ ও হাসপাতাল`,
+  diseases: [
+    "dis461", "dis462", "dis463", "dis464", "dis465", "dis466", "dis467", "dis468", "dis469", "dis470", "dis471", "dis472", "dis473", "dis474", "dis475", "dis476", "dis477", "dis478", "dis479", "dis480", "dis481"],
+  schedule: [
+    { day: "শুক্রবার", time: "সকাল ১০ টা – সন্ধ্যা ৬ টা পর্যন্ত" }
+  ],
+  chamber: "২১৪",
+  visitFee: {
+  new: "৬০০",
+  old: "৪০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d21",
+  name: "ডাঃ জি ডি মন্ডল",
+  photo: "assests/d21.png",
+  designation: "সহযোগী অধ্যাপক (নিউরোলজি)",
+  departments: "neuro",
+  degrees: `এমবিবিএস, এমডি (নিউরোলজি)
+সহযোগী অধ্যাপক (নিউরোলজি)
+ন্যাশনাল ইনস্টিটিউট অব নিউরোসায়েন্সেস, ঢাকা (এক্স)`,
+  diseases: [
+    "dis01", "dis02", "dis03", "dis04", "dis05", "dis06", "dis07", "dis08", "dis09", "dis10", "dis11", "dis12", "dis13", "dis14", "dis15", "dis16", "dis17", "dis18", "dis19", "dis20", "dis21", "dis22", "dis23", "dis24", "dis25", "dis26", "dis27", "dis28", "dis29", "dis30"],
+  schedule: [
+    { day: "শুক্রবার", time: "সকাল ৮ টা – বিকাল ৩ টা পর্যন্ত" }
+  ],
+  chamber: "২০২",
+  visitFee: {
+  new: "৮০০",
+  old: "৬০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d22",
+  name: "ডাঃ মোঃ শফিউল আলম বাবুল",
+  photo: "assests/d22.png",
+  designation: "সহকারী অধ্যাপক (ইউরোলজি)",
+  departments: "uro",
+  degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
+এম.এস (ইউরোলজি), ইউআরসি (সিঙ্গাপুর)
+সহকারী অধ্যাপক (ইউরোলজি)
+ন্যাশনাল ইনস্টিটিউট অব কিডনি ডিজিজেস অ্যান্ড ইউরোলজি, ঢাকা`,
+  diseases: [
+  "dis198", "dis199", "dis200", "dis201", "dis202", "dis203", "dis204", "dis205", "dis206", "dis207", "dis208", "dis209", "dis210", "dis211", "dis212", "dis213", "dis214", "dis215", "dis216", "dis217", "dis218", "dis219", "dis220", "dis221", "dis222", "dis223", "dis224", "dis225", "dis226", "dis227"],
+  schedule: [
+    { day: "শুক্রবার", time: "সকাল ১১ টা – বিকাল ৫ টা পর্যন্ত" }
+  ],
+  chamber: "২১০",
+  visitFee: {
+  new: "৮০০",
+  old: "৬০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d23",
+  name: "ডাঃ মোঃ আমিনুল ইসলাম",
+  photo: "assests/d23.png",
+  designation: "সহকারী অধ্যাপক (অর্থোপেডিক্স বিভাগ)",
+  departments: "ortho",
+  degrees: `এমবিবিএস (ডিইউ), বিসিএস (স্বাস্থ্য)
+এমএস (অর্থো-সার্জারি), এফএসিএস (আমেরিকা)
+মেম্বার (এ ও ট্রমা এন্ড স্পাইন) সুইজারল্যান্ড
+উচ্চতর প্রশিক্ষণ (এ ও ট্রমা এন্ড স্পাইন) শ্রীলংকা, ভারত, ইন্দোনেশিয়া ও মালয়েশিয়া
+সহকারী অধ্যাপক (অর্থোপেডিক্স বিভাগ)
+ময়মনসিংহ মেডিকেল কলেজ ও হাসপাতাল`,
+  diseases: [
+    "dis258", "dis259", "dis260", "dis261", "dis262", "dis263", "dis264", "dis265", "dis266", "dis267", "dis268", "dis269", "dis270", "dis271", "dis272", "dis273", "dis274", "dis275", "dis276", "dis277", "dis278", "dis279", "dis280", "dis281", "dis282", "dis283", "dis284", "dis285", "dis286", "dis287"],
+  schedule: [
+    { day: "শুক্রবার", time: "সকাল ১০ টা – বিকাল ৪ টা পর্যন্ত" }
+  ],
+  chamber: "১০৫",
+  visitFee: {
+  new: "৮০০",
+  old: "৬০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d24",
+  name: "অধ্যাপক ডাঃ শেখ মুহাম্মদ আলী ইমাম",
+  photo: "assests/d24.png",
+  designation: "অধ্যাপক ও বিভাগীয় প্রধান - মনোরোগ বিভাগ",
+  departments: "psychiatry",
+  degrees: `এমবিবিএস, এমফিল (সাইকিয়েট্রি), BSMMU
+নিউরো মেডিসিনে বিশেষ প্রশিক্ষণ প্রাপ্ত
+অধ্যাপক ও বিভাগীয় প্রধান - মনোরোগ বিভাগ
+জামালপুর মেডিকেল কলেজ হাসপাতাল`,
+  diseases: [
+  "dis409", "dis410", "dis411", "dis412", "dis413", "dis414", "dis415", "dis416", "dis417", "dis418", "dis419", "dis420", "dis421", "dis422", "dis423", "dis424", "dis425", "dis426", "dis427", "dis428", "dis429", "dis430", "dis431", "dis432", "dis433"],
+  schedule: [
+    { day: "বুধবার", time: "বিকাল ৪ টা – রাত ৮ টা পর্যন্ত" }
+  ],
+  chamber: "২১১",
+  visitFee: {
+  new: "৮০০",
+  old: "৬০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d25",
+  name: "অধ্যাপক ডাঃ গুলনার বেগম",
+  photo: "assests/d25.png",
+  designation: "অধ্যাপক (রেডিওলজি এন্ড ইমেজিং)",
+  departments: "radiology",
+  degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
+এমডি (রেডিওলজি এন্ড ইমেজিং)
+অধ্যাপক (রেডিওলজি এন্ড ইমেজিং)
+ময়মনসিংহ মেডিকেল কলেজ ও হাসপাতাল`,
+  diseases: [
+    "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis"],
+  schedule: [
+    { day: "বুধবার", time: "সকাল ১০ টা – দুপুর ১ টা পর্যন্ত" }
+  ],
+  chamber: "২১৫",
+    tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d26",
+  name: "ডাঃ আহম্মদ আলী আকন্দ",
+  photo: "assests/d26.png",
+  designation: "অ্যাজমা ও বক্ষব্যাধি বিশেষজ্ঞ",
+  departments: "pulmo",
+  degrees: `এমবিবিএস (ঢাকা), ডিটিসিডি (ডিইউ)
+(অবঃ) সিনিয়র কনসালটেন্ট
+বক্ষব্যাধি ক্লিনিক
+জামালপুর`,
+  diseases: [
+    "dis98", "dis99", "dis100", "dis101", "dis102", "dis103", "dis104", "dis105", "dis106", "dis107", "dis108", "dis109", "dis110", "dis111", "dis112", "dis113", "dis114", "dis115", "dis116", "dis117"],
+  schedule: [
+    { day: "শনি - বৃহস্পতিবার", time: "দুপুর ২ টা – সন্ধ্যা ৭ টা পর্যন্ত" }
+  ],
+  chamber: "২০৬",
+  visitFee: {
+  new: "৭০০",
+  old: "৫০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d27",
+  name: "ডাঃ মোঃ ওয়েস করনী",
+  photo: "assests/d27.png",
+  designation: "সহকারী অধ্যাপক (প্যাথলজি)",
+  departments: "pathology",
+  degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
+এমডি (প্যাথলজি)
+সহকারী অধ্যাপক (প্যাথলজি)
+হিস্টো ও সাইটো প্যাথলজিস্ট`,
+  diseases: [
+    "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis", "dis"],
+  schedule: [
+    { day: "সোমবার", time: "বিকাল ৩ টা – সন্ধ্যা ৭ টা পর্যন্ত" }
+  ],
+  chamber: "২০৭",
+    tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d28",
+  name: "ডাঃ আশরাফুল ইসলাম রাজিব",
+  photo: "assests/d28.png",
+  designation: "নাক-কান-গলা রোগ বিশেষজ্ঞ ও হেড-নেক সার্জন",
+  departments: "ent",
+  degrees: `এমবিবিএস (সিওমেক), বিসিএস (স্বাস্থ্য), সিসিডি (বারডেম)
+এমসিপিএস (ইএনটি এন্ড হেড-নেক সার্জারি)
+এফসিপিএস (নাক-কান-গলা ও হেড-নেক সার্জারি)
+নাক-কান-গলা রোগ বিশেষজ্ঞ ও হেড-নেক সার্জন
+জাতীয় নাক-কান-গলা ইনস্টিটিউট ও হাসপাতাল
+তেজগাঁও, ঢাকা`,
+  diseases: [
+    "dis31", "dis32", "dis33", "dis34", "dis35", "dis36", "dis37", "dis38", "dis39", "dis40", "dis41", "dis42", "dis43", "dis44", "dis45", "dis46", "dis47", "dis48", "dis49", "dis50", "dis51", "dis52", "dis53", "dis54", "dis55", "dis56", "dis57", "dis58"],
+  schedule: [
+    { day: "বৃহস্পতিবার", time: "বিকাল ৩ টা – সন্ধ্যা ৬ টা পর্যন্ত" }
+  ],
+  chamber: "২০৭",
+  visitFee: {
+  new: "৭০০",
+  old: "৫০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+},
+
+{
+  id: "d29",
+  name: "ডাঃ মোহাম্মদ তৌহিদুল ইসলাম (রাজিব)",
+  photo: "assests/d29.png",
+  designation: "ইমারজেন্সি মেডিকেল অফিসার",
+  departments: "medicine",
+  degrees: `এমবিবিএস (ঢাকা), বিসিএস (স্বাস্থ্য), এফসিপিএস (শেষ-পর্ব)
+এমডি (বক্ষব্যাধি কোর্স), পিজিটি (নিউরোলজি)
+ইমারজেন্সি মেডিকেল অফিসার
+২৫০ শয্যা জেনারেল হাসপাতাল, জামালপুর
+প্রাত্তন-মেডিসিন বিভাগ, বাংলাদেশ মেডিকেল বিশ্ববিদ্যালয়, ঢাকা
+সহকারী রেজিস্ট্রার, ময়মনসিংহ মেডিকেল কলেজ হাসপাতাল`,
+  diseases: [
+    "dis379", "dis380", "dis381", "dis382", "dis383", "dis384", "dis385", "dis386", "dis387", "dis388", "dis389", "dis390", "dis391", "dis392", "dis393", "dis394", "dis395", "dis396", "dis397", "dis398", "dis399", "dis400", "dis401", "dis402", "dis403", "dis404", "dis405", "dis406", "dis407", "dis408"],
+  schedule: [
+    { day: "বৃহস্পতিবার", time: "দুপুর ২ টা – বিকাল ৪:৩০ মিনিট পর্যন্ত" }
+  ],
+  chamber: "২১৪",
+  visitFee: {
+  new: "৭০০",
+  old: "৫০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+  tests: [
+    { name: "থাইরয়েড ফাংশন টেস্ট (T3, T4, TSH)", price: "৮৫০" },
+    { name: "ব্লাড সুগার (ফাস্টিং)", price: "১৫০" },
+    { name: "HbA1c", price: "৬৫০" },
+    { name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)", price: "৮০০" },
+  ],
+}
+];
+
+// ─────────────────────────────────────────────
+//  DISEASES
+// ─────────────────────────────────────────────
+const DISEASES = [
+  // ── মস্তিষ্ক (Brain) – neuro ──
+  { id:"dis01", name:"স্ট্রোক", nameEn:"Stroke", bodyPart:"brain", department:"neuro", keywords:["স্ট্রোক","stroke","brain","মস্তিষ্ক","প্যারালাইসিস"] },
+  { id:"dis02", name:"মস্তিষ্কে রক্তক্ষরণ", nameEn:"Brain Hemorrhage", bodyPart:"brain", department:"neuro", keywords:["মস্তিষ্কে রক্তক্ষরণ","brain hemorrhage","brain bleed","মস্তিষ্ক"] },
+  { id:"dis03", name:"মস্তিষ্কে রক্ত চলাচল বন্ধ", nameEn:"Brain Infarction", bodyPart:"brain", department:"neuro", keywords:["brain infarction","brain stroke","মস্তিষ্কে রক্ত চলাচল বন্ধ","stroke"] },
+  { id:"dis04", name:"মাইগ্রেন", nameEn:"Migraine", bodyPart:"brain", department:"neuro", keywords:["মাইগ্রেন","migraine","মাথাব্যথা","headache"] },
+  { id:"dis05", name:"মাথাব্যথা", nameEn:"Headache", bodyPart:"brain", department:"neuro", keywords:["মাথাব্যথা","headache","head pain","মাথা"] },
+  { id:"dis06", name:"টেনশনজনিত মাথাব্যথা", nameEn:"Tension Headache", bodyPart:"brain", department:"neuro", keywords:["টেনশনজনিত মাথাব্যথা","tension headache","headache"] },
+  { id:"dis07", name:"ক্লাস্টার মাথাব্যথা", nameEn:"Cluster Headache", bodyPart:"brain", department:"neuro", keywords:["ক্লাস্টার মাথাব্যথা","cluster headache","headache"] },
+  { id:"dis08", name:"মৃগী রোগ", nameEn:"Epilepsy", bodyPart:"brain", department:"neuro", keywords:["মৃগী","epilepsy","খিঁচুনি","seizure"] },
+  { id:"dis09", name:"খিঁচুনি", nameEn:"Seizure", bodyPart:"brain", department:"neuro", keywords:["খিঁচুনি","seizure","convulsion","মৃগী"] },
+  { id:"dis10", name:"পারকিনসন রোগ", nameEn:"Parkinson's Disease", bodyPart:"brain", department:"neuro", keywords:["পারকিনসন","parkinson","কম্পন","movement disorder"] },
+  { id:"dis11", name:"আলঝেইমার রোগ", nameEn:"Alzheimer's Disease", bodyPart:"brain", department:"neuro", keywords:["আলঝেইমার","alzheimers","স্মৃতিভ্রংশ","memory loss"] },
+  { id:"dis12", name:"ডিমেনশিয়া", nameEn:"Dementia", bodyPart:"brain", department:"neuro", keywords:["ডিমেনশিয়া","dementia","memory","স্মৃতিশক্তি"] },
+  { id:"dis13", name:"মাল্টিপল স্ক্লেরোসিস", nameEn:"Multiple Sclerosis", bodyPart:"brain", department:"neuro", keywords:["multiple sclerosis","MS","মাল্টিপল স্ক্লেরোসিস"] },
+  { id:"dis14", name:"বেলস পালসি", nameEn:"Bell's Palsy", bodyPart:"brain", department:"neuro", keywords:["বেলস পালসি","bells palsy","মুখ বেঁকে যাওয়া","facial paralysis"] },
+  { id:"dis15", name:"ফেসিয়াল পালসি", nameEn:"Facial Palsy", bodyPart:"brain", department:"neuro", keywords:["ফেসিয়াল পালসি","facial palsy","মুখ অবশ"] },
+  { id:"dis16", name:"ট্রাইজেমিনাল নিউরালজিয়া", nameEn:"Trigeminal Neuralgia", bodyPart:"brain", department:"neuro", keywords:["ট্রাইজেমিনাল নিউরালজিয়া","trigeminal neuralgia","মুখের ব্যথা"] },
+  { id:"dis17", name:"পেরিফেরাল নিউরোপ্যাথি", nameEn:"Peripheral Neuropathy", bodyPart:"brain", department:"neuro", keywords:["পেরিফেরাল নিউরোপ্যাথি","peripheral neuropathy","নার্ভ","nerve"] },
+  { id:"dis18", name:"ডায়াবেটিক নিউরোপ্যাথি", nameEn:"Diabetic Neuropathy", bodyPart:"brain", department:"neuro", keywords:["ডায়াবেটিক নিউরোপ্যাথি","diabetic neuropathy","ডায়াবেটিস","nerve"] },
+  { id:"dis19", name:"সায়াটিকা", nameEn:"Sciatica", bodyPart:"brain", department:"neuro", keywords:["সায়াটিকা","sciatica","কোমর ব্যথা","নার্ভ"] },
+  { id:"dis20", name:"হাত-পা অবশ হওয়া", nameEn:"Limb Numbness", bodyPart:"brain", department:"neuro", keywords:["হাত-পা অবশ","limb numbness","numbness","অবশ"] },
+  { id:"dis21", name:"মাথা ঘোরা", nameEn:"Vertigo", bodyPart:"brain", department:"neuro", keywords:["মাথা ঘোরা","vertigo","dizziness","balance"] },
+  { id:"dis22", name:"ভারসাম্যহীনতা", nameEn:"Balance Disorder", bodyPart:"brain", department:"neuro", keywords:["ভারসাম্যহীনতা","balance disorder","balance","হাঁটতে সমস্যা"] },
+  { id:"dis23", name:"স্পাইনাল কর্ডের রোগ", nameEn:"Spinal Cord Disorder", bodyPart:"brain", department:"neuro", keywords:["স্পাইনাল কর্ড","spinal cord disorder","মেরুদণ্ড","spine"] },
+  { id:"dis24", name:"মেনিনজাইটিস", nameEn:"Meningitis", bodyPart:"brain", department:"neuro", keywords:["মেনিনজাইটিস","meningitis","brain infection"] },
+  { id:"dis25", name:"এনসেফালাইটিস", nameEn:"Encephalitis", bodyPart:"brain", department:"neuro", keywords:["এনসেফালাইটিস","encephalitis","brain inflammation"] },
+  { id:"dis26", name:"ব্রেইন টিউমার", nameEn:"Brain Tumor", bodyPart:"brain", department:"neuro", keywords:["ব্রেইন টিউমার","brain tumor","brain cancer","মস্তিষ্ক"] },
+  { id:"dis27", name:"সেরিব্রাল পালসি", nameEn:"Cerebral Palsy", bodyPart:"brain", department:"neuro", keywords:["সেরিব্রাল পালসি","cerebral palsy","শিশু","movement"] },
+  { id:"dis28", name:"হাইড্রোসেফালাস", nameEn:"Hydrocephalus", bodyPart:"brain", department:"neuro", keywords:["হাইড্রোসেফালাস","hydrocephalus","brain fluid"] },
+  { id:"dis29", name:"মায়াস্থেনিয়া গ্রাভিস", nameEn:"Myasthenia Gravis", bodyPart:"brain", department:"neuro", keywords:["মায়াস্থেনিয়া গ্রাভিস","myasthenia gravis","muscle weakness"] },
+  { id:"dis30", name:"নিউরোমাসকুলার রোগ", nameEn:"Neuromuscular Disorder", bodyPart:"brain", department:"neuro", keywords:["নিউরোমাসকুলার রোগ","neuromuscular disorder","nerve","muscle"] },
+
+  // ── কান (Ear) – ent ──
+  { id:"dis31", name:"কানে ব্যথা", nameEn:"Ear Pain", bodyPart:"ear", department:"ent", keywords:["কানে ব্যথা","কান","ব্যথা","ear","ear pain"] },
+  { id:"dis32", name:"কান থেকে পুঁজ পড়া", nameEn:"Ear Discharge", bodyPart:"ear", department:"ent", keywords:["কান থেকে পুঁজ","ear discharge","ear","পুঁজ"] },
+  { id:"dis33", name:"কানের সংক্রমণ", nameEn:"Ear Infection", bodyPart:"ear", department:"ent", keywords:["কানের সংক্রমণ","ear infection","ear","infection"] },
+  { id:"dis34", name:"মধ্যকর্ণের সংক্রমণ", nameEn:"Otitis Media", bodyPart:"ear", department:"ent", keywords:["মধ্যকর্ণ","otitis media","middle ear infection","ear"] },
+  { id:"dis35", name:"বাইরের কানের সংক্রমণ", nameEn:"Otitis Externa", bodyPart:"ear", department:"ent", keywords:["বাইরের কানের সংক্রমণ","otitis externa","outer ear infection"] },
+  { id:"dis36", name:"শ্রবণশক্তি হ্রাস", nameEn:"Hearing Loss", bodyPart:"ear", department:"ent", keywords:["শ্রবণশক্তি হ্রাস","hearing loss","hearing","ear"] },
+  { id:"dis37", name:"বধিরতা", nameEn:"Deafness", bodyPart:"ear", department:"ent", keywords:["বধিরতা","deafness","hearing","ear"] },
+  { id:"dis38", name:"কানে শব্দ হওয়া", nameEn:"Tinnitus", bodyPart:"ear", department:"ent", keywords:["কানে শব্দ","tinnitus","ringing in ears","ear"] },
+  { id:"dis39", name:"কানের পর্দা ছিদ্র", nameEn:"Perforated Eardrum", bodyPart:"ear", department:"ent", keywords:["কানের পর্দা","perforated eardrum","eardrum rupture","ear"] },
+  { id:"dis40", name:"কানে ময়লা জমা", nameEn:"Ear Wax Impaction", bodyPart:"ear", department:"ent", keywords:["কানে ময়লা","ear wax","wax impaction","ear"] },
+  { id:"dis41", name:"নাক বন্ধ", nameEn:"Nasal Blockage", bodyPart:"nose", department:"ent", keywords:["নাক বন্ধ","nasal blockage","blocked nose","nose"] },
+  { id:"dis42", name:"অ্যালার্জিক রাইনাইটিস", nameEn:"Allergic Rhinitis", bodyPart:"nose", department:"ent", keywords:["অ্যালার্জিক রাইনাইটিস","allergic rhinitis","nasal allergy","nose"] },
+  { id:"dis43", name:"সাইনুসাইটিস", nameEn:"Sinusitis", bodyPart:"nose", department:"ent", keywords:["সাইনুসাইটিস","sinusitis","sinus","nose"] },
+  { id:"dis44", name:"নাক দিয়ে রক্ত পড়া", nameEn:"Epistaxis", bodyPart:"nose", department:"ent", keywords:["নাক দিয়ে রক্ত","epistaxis","nose bleed","nose"] },
+  { id:"dis45", name:"নাকের পলিপ", nameEn:"Nasal Polyp", bodyPart:"nose", department:"ent", keywords:["নাকের পলিপ","nasal polyp","nose polyp","nose"] },
+  { id:"dis46", name:"নাকের হাড় বাঁকা", nameEn:"Deviated Nasal Septum", bodyPart:"nose", department:"ent", keywords:["নাকের হাড় বাঁকা","deviated nasal septum","DNS","nose"] },
+  { id:"dis47", name:"টনসিলাইটিস", nameEn:"Tonsillitis", bodyPart:"throat", department:"ent", keywords:["টনসিলাইটিস","tonsillitis","tonsil","throat"] },
+  { id:"dis48", name:"ফ্যারিঞ্জাইটিস", nameEn:"Pharyngitis", bodyPart:"throat", department:"ent", keywords:["ফ্যারিঞ্জাইটিস","pharyngitis","throat infection","throat"] },
+  { id:"dis49", name:"লারিঞ্জাইটিস", nameEn:"Laryngitis", bodyPart:"throat", department:"ent", keywords:["লারিঞ্জাইটিস","laryngitis","voice box","throat"] },
+  { id:"dis50", name:"গলা ব্যথা", nameEn:"Sore Throat", bodyPart:"throat", department:"ent", keywords:["গলা ব্যথা","sore throat","throat pain","throat"] },
+  { id:"dis51", name:"কণ্ঠস্বর ভেঙে যাওয়া", nameEn:"Hoarseness", bodyPart:"throat", department:"ent", keywords:["কণ্ঠস্বর ভেঙে যাওয়া","hoarseness","voice change","throat"] },
+  { id:"dis52", name:"ভোকাল কর্ড নডিউল", nameEn:"Vocal Cord Nodule", bodyPart:"throat", department:"ent", keywords:["ভোকাল কর্ড নডিউল","vocal cord nodule","voice","throat"] },
+  { id:"dis53", name:"অ্যাডিনয়েড", nameEn:"Adenoid Hypertrophy", bodyPart:"throat", department:"ent", keywords:["অ্যাডিনয়েড","adenoid hypertrophy","adenoid","throat"] },
+  { id:"dis54", name:"স্লিপ অ্যাপনিয়া", nameEn:"Sleep Apnea", bodyPart:"throat", department:"ent", keywords:["স্লিপ অ্যাপনিয়া","sleep apnea","snoring","throat"] },
+  { id:"dis55", name:"ঘাড়ের লিম্ফ নোড ফোলা", nameEn:"Cervical Lymphadenopathy", bodyPart:"neck", department:"ent", keywords:["ঘাড়ের লিম্ফ নোড","cervical lymphadenopathy","lymph node","neck"] },
+  { id:"dis56", name:"মুখের দুর্গন্ধ", nameEn:"Halitosis", bodyPart:"throat", department:"ent", keywords:["মুখের দুর্গন্ধ","halitosis","bad breath","mouth"] },
+  { id:"dis57", name:"গিলতে কষ্ট", nameEn:"Dysphagia", bodyPart:"throat", department:"ent", keywords:["গিলতে কষ্ট","dysphagia","difficulty swallowing","throat"] },
+  { id:"dis58", name:"নাকের টিউমার", nameEn:"Nasal Tumor", bodyPart:"nose", department:"ent", keywords:["নাকের টিউমার","nasal tumor","nose tumor","nose"] },
+
+  // ── দাঁত (Dental) ──
+  { id:"dis59", name:"দাঁতে ব্যথা", nameEn:"Toothache", bodyPart:"teeth", department:"dental", keywords:["দাঁতে ব্যথা","দাঁত","toothache","tooth","দন্ত"] },
+  { id:"dis60", name:"দাঁতে ক্ষয়", nameEn:"Dental Caries", bodyPart:"teeth", department:"dental", keywords:["দাঁতে ক্ষয়","dental caries","cavity","tooth decay","দন্ত"] },
+  { id:"dis61", name:"মাড়ির প্রদাহ", nameEn:"Gingivitis", bodyPart:"gums", department:"dental", keywords:["মাড়ির প্রদাহ","gingivitis","gum disease","gums","দন্ত"] },
+  { id:"dis62", name:"পেরিওডোন্টাইটিস", nameEn:"Periodontitis", bodyPart:"gums", department:"dental", keywords:["পেরিওডোন্টাইটিস","periodontitis","gum infection","gums","দন্ত"] },
+  { id:"dis63", name:"দাঁতের সংক্রমণ", nameEn:"Dental Infection", bodyPart:"teeth", department:"dental", keywords:["দাঁতের সংক্রমণ","dental infection","tooth infection","দন্ত"] },
+  { id:"dis64", name:"দাঁতের ফোঁড়া", nameEn:"Dental Abscess", bodyPart:"teeth", department:"dental", keywords:["দাঁতের ফোঁড়া","dental abscess","tooth abscess","দন্ত"] },
+  { id:"dis65", name:"আক্কেল দাঁতের সমস্যা", nameEn:"Wisdom Tooth Problem", bodyPart:"teeth", department:"dental", keywords:["আক্কেল দাঁত","wisdom tooth","wisdom tooth problem","দন্ত"] },
+  { id:"dis66", name:"দাঁত ভেঙে যাওয়া", nameEn:"Broken Tooth", bodyPart:"teeth", department:"dental", keywords:["দাঁত ভেঙে যাওয়া","broken tooth","tooth fracture","দন্ত"] },
+  { id:"dis67", name:"দাঁত নড়ে যাওয়া", nameEn:"Loose Tooth", bodyPart:"teeth", department:"dental", keywords:["দাঁত নড়ে যাওয়া","loose tooth","loose teeth","দন্ত"] },
+  { id:"dis68", name:"দাঁতের সংবেদনশীলতা", nameEn:"Tooth Sensitivity", bodyPart:"teeth", department:"dental", keywords:["দাঁতের সংবেদনশীলতা","tooth sensitivity","sensitive teeth","দন্ত"] },
+  { id:"dis69", name:"মুখে ঘা", nameEn:"Mouth Ulcer", bodyPart:"mouth", department:"dental", keywords:["মুখে ঘা","mouth ulcer","oral ulcer","মুখ"] },
+  { id:"dis70", name:"মুখের দুর্গন্ধ", nameEn:"Bad Breath", bodyPart:"mouth", department:"dental", keywords:["মুখের দুর্গন্ধ","bad breath","halitosis","মুখ"] },
+  { id:"dis71", name:"চোয়ালের ব্যথা", nameEn:"Jaw Pain", bodyPart:"jaw", department:"dental", keywords:["চোয়ালের ব্যথা","jaw pain","jaw","TMJ"] },
+  { id:"dis72", name:"TM জয়েন্টের সমস্যা", nameEn:"Temporomandibular Joint Disorder", bodyPart:"jaw", department:"dental", keywords:["TMJ","temporomandibular joint disorder","TM joint disorder","চোয়াল"] },
+  { id:"dis73", name:"দাঁতের অস্বাভাবিক বিন্যাস", nameEn:"Malocclusion", bodyPart:"teeth", department:"dental", keywords:["দাঁতের অস্বাভাবিক বিন্যাস","malocclusion","crooked teeth","দন্ত"] },
+  { id:"dis74", name:"দাঁত ঘষার অভ্যাস", nameEn:"Bruxism", bodyPart:"teeth", department:"dental", keywords:["দাঁত ঘষা","bruxism","teeth grinding","দন্ত"] },
+  { id:"dis75", name:"ওরাল ক্যানডিডিয়াসিস", nameEn:"Oral Candidiasis", bodyPart:"mouth", department:"dental", keywords:["ওরাল ক্যানডিডিয়াসিস","oral candidiasis","oral thrush","মুখ"] },
+  { id:"dis76", name:"মুখের ক্যান্সার", nameEn:"Oral Cancer", bodyPart:"mouth", department:"dental", keywords:["মুখের ক্যান্সার","oral cancer","mouth cancer","মুখ"] },
+  { id:"dis77", name:"জিহ্বার ঘা", nameEn:"Tongue Ulcer", bodyPart:"tongue", department:"dental", keywords:["জিহ্বার ঘা","tongue ulcer","tongue sore","জিহ্বা"] },
+  { id:"dis78", name:"শিশুদের দাঁতের সমস্যা", nameEn:"Pediatric Dental Disease", bodyPart:"teeth", department:"dental", keywords:["শিশুদের দাঁতের সমস্যা","pediatric dental disease","children dental","দন্ত"] },
+
+  // ── হৃদয় (Heart) – cardio ──
+  { id:"dis078", name:"উচ্চ রক্তচাপ", nameEn:"Hypertension", bodyPart:"heart", department:"cardio", keywords:["উচ্চ রক্তচাপ","hypertension","high blood pressure","bp","হার্ট"] },
+  { id:"dis79", name:"নিম্ন রক্তচাপ", nameEn:"Hypotension", bodyPart:"heart", department:"cardio", keywords:["নিম্ন রক্তচাপ","hypotension","low blood pressure","bp","হার্ট"] },
+  { id:"dis80", name:"হার্ট অ্যাটাক", nameEn:"Heart Attack", bodyPart:"heart", department:"cardio", keywords:["হার্ট অ্যাটাক","heart attack","myocardial infarction","হার্ট"] },
+  { id:"dis81", name:"করোনারি আর্টারি ডিজিজ", nameEn:"Coronary Artery Disease", bodyPart:"heart", department:"cardio", keywords:["করোনারি আর্টারি ডিজিজ","coronary artery disease","CAD","হার্ট"] },
+  { id:"dis82", name:"এনজাইনা", nameEn:"Angina", bodyPart:"heart", department:"cardio", keywords:["এনজাইনা","angina","chest pain","বুকে ব্যথা","হার্ট"] },
+  { id:"dis83", name:"হার্ট ফেইলিউর", nameEn:"Heart Failure", bodyPart:"heart", department:"cardio", keywords:["হার্ট ফেইলিউর","heart failure","cardiac failure","হার্ট"] },
+  { id:"dis84", name:"অ্যারিদমিয়া", nameEn:"Arrhythmia", bodyPart:"heart", department:"cardio", keywords:["অ্যারিদমিয়া","arrhythmia","irregular heartbeat","হার্ট"] },
+  { id:"dis85", name:"এট্রিয়াল ফিব্রিলেশন", nameEn:"Atrial Fibrillation", bodyPart:"heart", department:"cardio", keywords:["এট্রিয়াল ফিব্রিলেশন","atrial fibrillation","AF","irregular heartbeat"] },
+  { id:"dis86", name:"হার্ট ব্লক", nameEn:"Heart Block", bodyPart:"heart", department:"cardio", keywords:["হার্ট ব্লক","heart block","cardiac block","হার্ট"] },
+  { id:"dis87", name:"কার্ডিওমায়োপ্যাথি", nameEn:"Cardiomyopathy", bodyPart:"heart", department:"cardio", keywords:["কার্ডিওমায়োপ্যাথি","cardiomyopathy","heart muscle disease","হার্ট"] },
+  { id:"dis88", name:"জন্মগত হৃদরোগ", nameEn:"Congenital Heart Disease", bodyPart:"heart", department:"cardio", keywords:["জন্মগত হৃদরোগ","congenital heart disease","CHD","হার্ট"] },
+  { id:"dis89", name:"হার্টের ছিদ্র", nameEn:"Septal Defect", bodyPart:"heart", department:"cardio", keywords:["হার্টের ছিদ্র","septal defect","ASD","VSD","হার্ট"] },
+  { id:"dis90", name:"হার্টের ভালভ রোগ", nameEn:"Valvular Heart Disease", bodyPart:"heart", department:"cardio", keywords:["হার্টের ভালভ রোগ","valvular heart disease","heart valve","হার্ট"] },
+  { id:"dis91", name:"পেরিকার্ডাইটিস", nameEn:"Pericarditis", bodyPart:"heart", department:"cardio", keywords:["পেরিকার্ডাইটিস","pericarditis","heart lining","হার্ট"] },
+  { id:"dis92", name:"মায়োকার্ডাইটিস", nameEn:"Myocarditis", bodyPart:"heart", department:"cardio", keywords:["মায়োকার্ডাইটিস","myocarditis","heart muscle inflammation","হার্ট"] },
+  { id:"dis93", name:"এন্ডোকার্ডাইটিস", nameEn:"Endocarditis", bodyPart:"heart", department:"cardio", keywords:["এন্ডোকার্ডাইটিস","endocarditis","heart infection","হার্ট"] },
+  { id:"dis94", name:"উচ্চ কোলেস্টেরল", nameEn:"Hypercholesterolemia", bodyPart:"heart", department:"cardio", keywords:["উচ্চ কোলেস্টেরল","hypercholesterolemia","high cholesterol","cholesterol"] },
+  { id:"dis95", name:"পালপিটেশন", nameEn:"Palpitation", bodyPart:"heart", department:"cardio", keywords:["পালপিটেশন","palpitation","heart palpitation","হৃদস্পন্দন"] },
+  { id:"dis96", name:"বুকে ব্যথা", nameEn:"Chest Pain", bodyPart:"heart", department:"cardio", keywords:["বুকে ব্যথা","chest pain","chest","pain","হার্ট"] },
+  { id:"dis97", name:"হার্টের দুর্বলতা", nameEn:"Cardiac Weakness", bodyPart:"heart", department:"cardio", keywords:["হার্টের দুর্বলতা","cardiac weakness","weak heart","হার্ট"] },
+
+  // ── ফুসফুস (Lung) – pulmo ──
+ { id:"dis98", name:"হাঁপানি", nameEn:"Asthma", bodyPart:"lung", department:"pulmo", keywords:["হাঁপানি","অ্যাজমা","asthma","শ্বাস","শ্বাসকষ্ট"] },
+ { id:"dis99", name:"সিওপিডি", nameEn:"COPD", bodyPart:"lung", department:"pulmo", keywords:["সিওপিডি","copd","chronic obstructive pulmonary disease","ফুসফুস"] },
+ { id:"dis100", name:"নিউমোনিয়া", nameEn:"Pneumonia", bodyPart:"lung", department:"pulmo", keywords:["নিউমোনিয়া","pneumonia","lung infection","ফুসফুস"] },
+ { id:"dis101", name:"যক্ষ্মা", nameEn:"Tuberculosis", bodyPart:"lung", department:"pulmo", keywords:["যক্ষ্মা","tuberculosis","tb","ফুসফুস"] },
+ { id:"dis102", name:"দীর্ঘস্থায়ী কাশি", nameEn:"Chronic Cough", bodyPart:"lung", department:"pulmo", keywords:["দীর্ঘস্থায়ী কাশি","chronic cough","কাশি","ফুসফুস"] },
+ { id:"dis103", name:"শ্বাসকষ্ট", nameEn:"Shortness of Breath", bodyPart:"lung", department:"pulmo", keywords:["শ্বাসকষ্ট","shortness of breath","breathlessness","শ্বাস"] },
+ { id:"dis104", name:"ফুসফুসের সংক্রমণ", nameEn:"Lung Infection", bodyPart:"lung", department:"pulmo", keywords:["ফুসফুসের সংক্রমণ","lung infection","lung","infection"] },
+ { id:"dis105", name:"ব্রংকাইটিস", nameEn:"Bronchitis", bodyPart:"lung", department:"pulmo", keywords:["ব্রংকাইটিস","bronchitis","bronchial infection","ফুসফুস"] },
+ { id:"dis106", name:"এমফাইসেমা", nameEn:"Emphysema", bodyPart:"lung", department:"pulmo", keywords:["এমফাইসেমা","emphysema","lung disease","ফুসফুস"] },
+ { id:"dis107", name:"প্লুরাল ইফিউশন", nameEn:"Pleural Effusion", bodyPart:"lung", department:"pulmo", keywords:["প্লুরাল ইফিউশন","pleural effusion","fluid around lungs","ফুসফুস"] },
+ { id:"dis108", name:"নিউমোথোরাক্স", nameEn:"Pneumothorax", bodyPart:"lung", department:"pulmo", keywords:["নিউমোথোরাক্স","pneumothorax","collapsed lung","ফুসফুস"] },
+ { id:"dis109", name:"ইন্টারস্টিশিয়াল লাং ডিজিজ", nameEn:"Interstitial Lung Disease", bodyPart:"lung", department:"pulmo", keywords:["ইন্টারস্টিশিয়াল লাং ডিজিজ","interstitial lung disease","ILD","ফুসফুস"] },
+ { id:"dis110", name:"স্লিপ অ্যাপনিয়া", nameEn:"Sleep Apnea", bodyPart:"lung", department:"pulmo", keywords:["স্লিপ অ্যাপনিয়া","sleep apnea","snoring","ঘুম"] },
+ { id:"dis111", name:"ফুসফুসের ক্যান্সার", nameEn:"Lung Cancer", bodyPart:"lung", department:"pulmo", keywords:["ফুসফুসের ক্যান্সার","lung cancer","lung tumor","ফুসফুস"] },
+ { id:"dis112", name:"অ্যালার্জিক কাশি", nameEn:"Allergic Cough", bodyPart:"lung", department:"pulmo", keywords:["অ্যালার্জিক কাশি","allergic cough","কাশি","অ্যালার্জি"] },
+ { id:"dis113", name:"রক্ত কাশি", nameEn:"Hemoptysis", bodyPart:"lung", department:"pulmo", keywords:["রক্ত কাশি","hemoptysis","কাশি","রক্ত"] },
+ { id:"dis114", name:"ফুসফুসে পানি জমা", nameEn:"Pulmonary Edema", bodyPart:"lung", department:"pulmo", keywords:["ফুসফুসে পানি জমা","pulmonary edema","lung fluid","ফুসফুস"] },
+ { id:"dis115", name:"সারকয়েডোসিস", nameEn:"Sarcoidosis", bodyPart:"lung", department:"pulmo", keywords:["সারকয়েডোসিস","sarcoidosis","lung disease","ফুসফুস"] },
+ { id:"dis116", name:"ব্রংকিয়েকটাসিস", nameEn:"Bronchiectasis", bodyPart:"lung", department:"pulmo", keywords:["ব্রংকিয়েকটাসিস","bronchiectasis","bronchial disease","ফুসফুস"] },
+ { id:"dis117", name:"পালমোনারি ফাইব্রোসিস", nameEn:"Pulmonary Fibrosis", bodyPart:"lung", department:"pulmo", keywords:["পালমোনারি ফাইব্রোসিস","pulmonary fibrosis","lung fibrosis","ফুসফুস"] },
+
+  // ── পেট (Stomach / Intestine) – gastro ──
+  { id:"dis118", name:"গ্যাস্ট্রিক", nameEn:"Gastritis", bodyPart:"stomach", department:"gastro", keywords:["গ্যাস্ট্রিক","gastritis","পাকস্থলী","stomach","অ্যাসিড"] },
+  { id:"dis119", name:"অ্যাসিডিটি", nameEn:"Acidity", bodyPart:"stomach", department:"gastro", keywords:["অ্যাসিডিটি","acidity","acid reflux","অম্বল","stomach"] },
+  { id:"dis120", name:"গ্যাস্ট্রোইসোফেজিয়াল রিফ্লাক্স ডিজিজ", nameEn:"GERD", bodyPart:"stomach", department:"gastro", keywords:["GERD","গ্যাস্ট্রোইসোফেজিয়াল রিফ্লাক্স","acid reflux","গ্যাস্ট্রিক"] },
+  { id:"dis121", name:"পেপটিক আলসার", nameEn:"Peptic Ulcer", bodyPart:"stomach", department:"gastro", keywords:["পেপটিক আলসার","peptic ulcer","ulcer","stomach"] },
+  { id:"dis122", name:"ডুওডেনাল আলসার", nameEn:"Duodenal Ulcer", bodyPart:"intestine", department:"gastro", keywords:["ডুওডেনাল আলসার","duodenal ulcer","duodenum","ulcer"] },
+  { id:"dis123", name:"পাকস্থলীর আলসার", nameEn:"Gastric Ulcer", bodyPart:"stomach", department:"gastro", keywords:["পাকস্থলীর আলসার","gastric ulcer","stomach ulcer"] },
+  { id:"dis124", name:"বদহজম", nameEn:"Indigestion", bodyPart:"stomach", department:"gastro", keywords:["বদহজম","indigestion","dyspepsia","হজম"] },
+  { id:"dis125", name:"পেট ব্যথা", nameEn:"Abdominal Pain", bodyPart:"stomach", department:"gastro", keywords:["পেট","ব্যথা","abdominal","pain","stomach"] },
+  { id:"dis126", name:"পেট ফাঁপা", nameEn:"Abdominal Bloating", bodyPart:"stomach", department:"gastro", keywords:["পেট ফাঁপা","abdominal bloating","bloating","gas"] },
+  { id:"dis127", name:"কোষ্ঠকাঠিন্য", nameEn:"Constipation", bodyPart:"intestine", department:"gastro", keywords:["কোষ্ঠকাঠিন্য","constipation","bowel","মল"] },
+  { id:"dis128", name:"ডায়রিয়া", nameEn:"Diarrhea", bodyPart:"intestine", department:"gastro", keywords:["ডায়রিয়া","diarrhea","loose motion","পাতলা পায়খানা"] },
+  { id:"dis129", name:"আমাশয়", nameEn:"Dysentery", bodyPart:"intestine", department:"gastro", keywords:["আমাশয়","dysentery","bloody diarrhea","পেট"] },
+  { id:"dis130", name:"ইরিটেবল বাওয়েল সিনড্রোম", nameEn:"Irritable Bowel Syndrome (IBS)", bodyPart:"intestine", department:"gastro", keywords:["IBS","ইরিটেবল বাওয়েল","bowel syndrome","পেট"] },
+  { id:"dis131", name:"ইনফ্ল্যামেটরি বাওয়েল ডিজিজ", nameEn:"Inflammatory Bowel Disease (IBD)", bodyPart:"intestine", department:"gastro", keywords:["IBD","ইনফ্ল্যামেটরি বাওয়েল","bowel inflammation","intestine"] },
+  { id:"dis132", name:"ক্রোনস ডিজিজ", nameEn:"Crohn's Disease", bodyPart:"intestine", department:"gastro", keywords:["ক্রোনস ডিজিজ","crohn's disease","crohn","intestine"] },
+  { id:"dis133", name:"আলসারেটিভ কোলাইটিস", nameEn:"Ulcerative Colitis", bodyPart:"intestine", department:"gastro", keywords:["আলসারেটিভ কোলাইটিস","ulcerative colitis","colitis","colon"] },
+  { id:"dis134", name:"সিলিয়াক ডিজিজ", nameEn:"Celiac Disease", bodyPart:"intestine", department:"gastro", keywords:["সিলিয়াক ডিজিজ","celiac disease","gluten","intestine"] },
+  { id:"dis135", name:"পাইলস", nameEn:"Hemorrhoids", bodyPart:"rectum", department:"gastro", keywords:["পাইলস","hemorrhoids","piles","মলদ্বার"] },
+  { id:"dis136", name:"ফিস্টুলা", nameEn:"Anal Fistula", bodyPart:"rectum", department:"gastro", keywords:["ফিস্টুলা","anal fistula","fistula","মলদ্বার"] },
+  { id:"dis137", name:"ফিশার", nameEn:"Anal Fissure", bodyPart:"rectum", department:"gastro", keywords:["ফিশার","anal fissure","fissure","মলদ্বার"] },
+  { id:"dis138", name:"রেক্টাল ব্লিডিং", nameEn:"Rectal Bleeding", bodyPart:"rectum", department:"gastro", keywords:["রেক্টাল ব্লিডিং","rectal bleeding","bleeding","মলদ্বার"] },
+  { id:"dis139", name:"অ্যাপেন্ডিসাইটিস", nameEn:"Appendicitis", bodyPart:"intestine", department:"gastro", keywords:["অ্যাপেন্ডিসাইটিস","appendicitis","appendix","পেট"] },
+  { id:"dis140", name:"প্যানক্রিয়াটাইটিস", nameEn:"Pancreatitis", bodyPart:"pancreas", department:"gastro", keywords:["প্যানক্রিয়াটাইটিস","pancreatitis","pancreas","অগ্ন্যাশয়"] },
+  { id:"dis141", name:"পিত্তথলির পাথর", nameEn:"Gallstones", bodyPart:"gallbladder", department:"gastro", keywords:["পিত্তথলির পাথর","gallstones","gallbladder stone","পিত্তথলি"] },
+  { id:"dis142", name:"পিত্তথলির প্রদাহ", nameEn:"Cholecystitis", bodyPart:"gallbladder", department:"gastro", keywords:["পিত্তথলির প্রদাহ","cholecystitis","gallbladder inflammation"] },
+  { id:"dis143", name:"কোলন পলিপ", nameEn:"Colon Polyp", bodyPart:"colon", department:"gastro", keywords:["কোলন পলিপ","colon polyp","colon","পলিপ"] },
+  { id:"dis144", name:"কোলন ক্যান্সার", nameEn:"Colon Cancer", bodyPart:"colon", department:"gastro", keywords:["কোলন ক্যান্সার","colon cancer","colon tumor","ক্যান্সার"] },
+  { id:"dis145", name:"রেকটাল ক্যান্সার", nameEn:"Rectal Cancer", bodyPart:"rectum", department:"gastro", keywords:["রেকটাল ক্যান্সার","rectal cancer","rectum","ক্যান্সার"] },
+  { id:"dis146", name:"পাকস্থলীর ক্যান্সার", nameEn:"Stomach Cancer", bodyPart:"stomach", department:"gastro", keywords:["পাকস্থলীর ক্যান্সার","stomach cancer","gastric cancer","ক্যান্সার"] },
+  { id:"dis147", name:"হজমের সমস্যা", nameEn:"Digestive Disorders", bodyPart:"digestive", department:"gastro", keywords:["হজমের সমস্যা","digestive disorders","digestive","হজম","গ্যাস্ট্রো"] },
+
+  // ── লিভার – hepato ──
+  { id:"dis148", name:"ফ্যাটি লিভার", nameEn:"Fatty Liver Disease", bodyPart:"liver", department:"hepato", keywords:["ফ্যাটি লিভার","fatty liver","fatty liver disease","লিভার"] },
+  { id:"dis149", name:"হেপাটাইটিস এ", nameEn:"Hepatitis A", bodyPart:"liver", department:"hepato", keywords:["হেপাটাইটিস এ","hepatitis a","HAV","লিভার"] },
+  { id:"dis150", name:"হেপাটাইটিস বি", nameEn:"Hepatitis B", bodyPart:"liver", department:"hepato", keywords:["হেপাটাইটিস বি","hepatitis b","HBV","লিভার"] },
+  { id:"dis151", name:"হেপাটাইটিস সি", nameEn:"Hepatitis C", bodyPart:"liver", department:"hepato", keywords:["হেপাটাইটিস সি","hepatitis c","HCV","লিভার"] },
+  { id:"dis152", name:"হেপাটাইটিস ডি", nameEn:"Hepatitis D", bodyPart:"liver", department:"hepato", keywords:["হেপাটাইটিস ডি","hepatitis d","HDV","লিভার"] },
+  { id:"dis153", name:"হেপাটাইটিস ই", nameEn:"Hepatitis E", bodyPart:"liver", department:"hepato", keywords:["হেপাটাইটিস ই","hepatitis e","HEV","লিভার"] },
+  { id:"dis154", name:"লিভার সিরোসিস", nameEn:"Liver Cirrhosis", bodyPart:"liver", department:"hepato", keywords:["লিভার সিরোসিস","liver cirrhosis","cirrhosis","লিভার"] },
+  { id:"dis155", name:"লিভার ফাইব্রোসিস", nameEn:"Liver Fibrosis", bodyPart:"liver", department:"hepato", keywords:["লিভার ফাইব্রোসিস","liver fibrosis","fibrosis","লিভার"] },
+  { id:"dis156", name:"লিভার ফেইলিউর", nameEn:"Liver Failure", bodyPart:"liver", department:"hepato", keywords:["লিভার ফেইলিউর","liver failure","hepatic failure","লিভার"] },
+  { id:"dis157", name:"জন্ডিস", nameEn:"Jaundice", bodyPart:"liver", department:"hepato", keywords:["জন্ডিস","jaundice","হলুদ চোখ","yellow","লিভার"] },
+  { id:"dis158", name:"লিভার অ্যাবসেস", nameEn:"Liver Abscess", bodyPart:"liver", department:"hepato", keywords:["লিভার অ্যাবসেস","liver abscess","abscess","লিভার"] },
+  { id:"dis159", name:"লিভার সিস্ট", nameEn:"Liver Cyst", bodyPart:"liver", department:"hepato", keywords:["লিভার সিস্ট","liver cyst","cyst","লিভার"] },
+  { id:"dis160", name:"লিভার টিউমার", nameEn:"Liver Tumor", bodyPart:"liver", department:"hepato", keywords:["লিভার টিউমার","liver tumor","tumor","লিভার"] },
+  { id:"dis161", name:"লিভার ক্যান্সার", nameEn:"Liver Cancer", bodyPart:"liver", department:"hepato", keywords:["লিভার ক্যান্সার","liver cancer","hepatocellular carcinoma","লিভার"] },
+  { id:"dis162", name:"হেপাটোমেগালি", nameEn:"Hepatomegaly", bodyPart:"liver", department:"hepato", keywords:["হেপাটোমেগালি","hepatomegaly","enlarged liver","লিভার"] },
+  { id:"dis163", name:"পোর্টাল হাইপারটেনশন", nameEn:"Portal Hypertension", bodyPart:"liver", department:"hepato", keywords:["পোর্টাল হাইপারটেনশন","portal hypertension","portal vein","লিভার"] },
+  { id:"dis164", name:"অ্যালকোহলিক লিভার ডিজিজ", nameEn:"Alcoholic Liver Disease", bodyPart:"liver", department:"hepato", keywords:["অ্যালকোহলিক লিভার ডিজিজ","alcoholic liver disease","alcohol","লিভার"] },
+  { id:"dis165", name:"নন-অ্যালকোহলিক ফ্যাটি লিভার", nameEn:"NAFLD", bodyPart:"liver", department:"hepato", keywords:["নন-অ্যালকোহলিক ফ্যাটি লিভার","NAFLD","non alcoholic fatty liver","লিভার"] },
+  { id:"dis166", name:"অটোইমিউন হেপাটাইটিস", nameEn:"Autoimmune Hepatitis", bodyPart:"liver", department:"hepato", keywords:["অটোইমিউন হেপাটাইটিস","autoimmune hepatitis","hepatitis","লিভার"] },
+  { id:"dis167", name:"উইলসন ডিজিজ", nameEn:"Wilson's Disease", bodyPart:"liver", department:"hepato", keywords:["উইলসন ডিজিজ","wilson's disease","copper disease","লিভার"] },
+  { id:"dis168", name:"হেমোক্রোমাটোসিস", nameEn:"Hemochromatosis", bodyPart:"liver", department:"hepato", keywords:["হেমোক্রোমাটোসিস","hemochromatosis","iron overload","লিভার"] },
+  { id:"dis169", name:"প্রাইমারি বিলিয়ারি কোলাঙ্গাইটিস", nameEn:"Primary Biliary Cholangitis", bodyPart:"bileduct", department:"hepato", keywords:["প্রাইমারি বিলিয়ারি কোলাঙ্গাইটিস","primary biliary cholangitis","PBC","bile duct"] },
+  { id:"dis170", name:"প্রাইমারি স্ক্লেরোজিং কোলাঙ্গাইটিস", nameEn:"Primary Sclerosing Cholangitis", bodyPart:"bileduct", department:"hepato", keywords:["প্রাইমারি স্ক্লেরোজিং কোলাঙ্গাইটিস","primary sclerosing cholangitis","PSC","bile duct"] },
+  { id:"dis171", name:"বাইল ডাক্টের সংক্রমণ", nameEn:"Cholangitis", bodyPart:"bileduct", department:"hepato", keywords:["বাইল ডাক্টের সংক্রমণ","cholangitis","bile duct infection","bile duct"] },
+  { id:"dis172", name:"বাইল ডাক্ট ব্লক", nameEn:"Biliary Obstruction", bodyPart:"bileduct", department:"hepato", keywords:["বাইল ডাক্ট ব্লক","biliary obstruction","blocked bile duct","bile duct"] },
+
+  // ── কিডনি – nephro ──
+  { id:"dis173", name:"দীর্ঘস্থায়ী কিডনি রোগ", nameEn:"Chronic Kidney Disease (CKD)", bodyPart:"kidney", department:"nephro", keywords:["দীর্ঘস্থায়ী কিডনি রোগ","CKD","chronic kidney disease","কিডনি"] },
+  { id:"dis174", name:"তীব্র কিডনি বিকল", nameEn:"Acute Kidney Injury (AKI)", bodyPart:"kidney", department:"nephro", keywords:["তীব্র কিডনি বিকল","AKI","acute kidney injury","কিডনি"] },
+  { id:"dis175", name:"কিডনি বিকল", nameEn:"Kidney Failure", bodyPart:"kidney", department:"nephro", keywords:["কিডনি বিকল","kidney failure","renal failure","কিডনি"] },
+  { id:"dis176", name:"নেফ্রাইটিস", nameEn:"Nephritis", bodyPart:"kidney", department:"nephro", keywords:["নেফ্রাইটিস","nephritis","kidney inflammation","কিডনি"] },
+  { id:"dis177", name:"গ্লোমেরুলোনেফ্রাইটিস", nameEn:"Glomerulonephritis", bodyPart:"kidney", department:"nephro", keywords:["গ্লোমেরুলোনেফ্রাইটিস","glomerulonephritis","glomerular disease","কিডনি"] },
+  { id:"dis178", name:"নেফ্রোটিক সিনড্রোম", nameEn:"Nephrotic Syndrome", bodyPart:"kidney", department:"nephro", keywords:["নেফ্রোটিক সিনড্রোম","nephrotic syndrome","proteinuria","কিডনি"] },
+  { id:"dis179", name:"প্রস্রাবে প্রোটিন", nameEn:"Proteinuria", bodyPart:"kidney", department:"nephro", keywords:["প্রস্রাবে প্রোটিন","proteinuria","protein in urine","কিডনি"] },
+  { id:"dis180", name:"প্রস্রাবে রক্ত", nameEn:"Hematuria", bodyPart:"kidney", department:"nephro", keywords:["প্রস্রাবে রক্ত","hematuria","blood in urine","কিডনি"] },
+  { id:"dis181", name:"কিডনির সংক্রমণ", nameEn:"Pyelonephritis", bodyPart:"kidney", department:"nephro", keywords:["কিডনির সংক্রমণ","pyelonephritis","kidney infection","কিডনি"] },
+  { id:"dis182", name:"ডায়াবেটিক নেফ্রোপ্যাথি", nameEn:"Diabetic Nephropathy", bodyPart:"kidney", department:"nephro", keywords:["ডায়াবেটিক নেফ্রোপ্যাথি","diabetic nephropathy","diabetes kidney","কিডনি"] },
+  { id:"dis183", name:"উচ্চ রক্তচাপজনিত কিডনি রোগ", nameEn:"Hypertensive Nephropathy", bodyPart:"kidney", department:"nephro", keywords:["উচ্চ রক্তচাপজনিত কিডনি রোগ","hypertensive nephropathy","high blood pressure kidney","কিডনি"] },
+  { id:"dis184", name:"পলিসিস্টিক কিডনি রোগ", nameEn:"Polycystic Kidney Disease", bodyPart:"kidney", department:"nephro", keywords:["পলিসিস্টিক কিডনি রোগ","polycystic kidney disease","PKD","কিডনি"] },
+  { id:"dis185", name:"কিডনির সিস্ট", nameEn:"Kidney Cyst", bodyPart:"kidney", department:"nephro", keywords:["কিডনির সিস্ট","kidney cyst","renal cyst","কিডনি"] },
+  { id:"dis186", name:"কিডনির প্রদাহ", nameEn:"Kidney Inflammation", bodyPart:"kidney", department:"nephro", keywords:["কিডনির প্রদাহ","kidney inflammation","renal inflammation","কিডনি"] },
+  { id:"dis187", name:"ইউরেমিয়া", nameEn:"Uremia", bodyPart:"kidney", department:"nephro", keywords:["ইউরেমিয়া","uremia","high urea","কিডনি"] },
+  { id:"dis188", name:"ইলেক্ট্রোলাইটের ভারসাম্যহীনতা", nameEn:"Electrolyte Imbalance", bodyPart:"kidney", department:"nephro", keywords:["ইলেক্ট্রোলাইটের ভারসাম্যহীনতা","electrolyte imbalance","electrolyte","কিডনি"] },
+  { id:"dis189", name:"হাইপোক্যালেমিয়া", nameEn:"Hypokalemia", bodyPart:"kidney", department:"nephro", keywords:["হাইপোক্যালেমিয়া","hypokalemia","low potassium","কিডনি"] },
+  { id:"dis190", name:"হাইপারক্যালেমিয়া", nameEn:"Hyperkalemia", bodyPart:"kidney", department:"nephro", keywords:["হাইপারক্যালেমিয়া","hyperkalemia","high potassium","কিডনি"] },
+  { id:"dis191", name:"মেটাবলিক অ্যাসিডোসিস", nameEn:"Metabolic Acidosis", bodyPart:"kidney", department:"nephro", keywords:["মেটাবলিক অ্যাসিডোসিস","metabolic acidosis","acid-base disorder","কিডনি"] },
+  { id:"dis192", name:"ডায়ালাইসিস প্রয়োজনীয় রোগ", nameEn:"Dialysis Dependent Kidney Disease", bodyPart:"kidney", department:"nephro", keywords:["ডায়ালাইসিস","dialysis","dialysis dependent kidney disease","কিডনি"] },
+  { id:"dis193", name:"কিডনিতে প্রোটিন লিক", nameEn:"Protein Leak in Kidney", bodyPart:"kidney", department:"nephro", keywords:["কিডনিতে প্রোটিন লিক","protein leak in kidney","proteinuria","কিডনি"] },
+  { id:"dis194", name:"কিডনি প্রতিস্থাপন-পরবর্তী জটিলতা", nameEn:"Post Kidney Transplant Complications", bodyPart:"kidney", department:"nephro", keywords:["কিডনি প্রতিস্থাপন","post kidney transplant","transplant complications","কিডনি"] },
+  { id:"dis195", name:"কিডনির জন্মগত রোগ", nameEn:"Congenital Kidney Disease", bodyPart:"kidney", department:"nephro", keywords:["কিডনির জন্মগত রোগ","congenital kidney disease","birth defect kidney","কিডনি"] },
+  { id:"dis196", name:"লুপাস নেফ্রাইটিস", nameEn:"Lupus Nephritis", bodyPart:"kidney", department:"nephro", keywords:["লুপাস নেফ্রাইটিস","lupus nephritis","SLE kidney","কিডনি"] },
+  { id:"dis197", name:"IgA নেফ্রোপ্যাথি", nameEn:"IgA Nephropathy", bodyPart:"kidney", department:"nephro", keywords:["IgA নেফ্রোপ্যাথি","iga nephropathy","berger disease","কিডনি"] },
+
+  // ── ইউরোলজি ──
+  { id:"dis198", name:"কিডনিতে পাথর", nameEn:"Kidney Stone", bodyPart:"kidney", department:"uro", keywords:["কিডনিতে পাথর","kidney stone","renal stone","কিডনি"] },
+  { id:"dis199", name:"ইউরেটারে পাথর", nameEn:"Ureteric Stone", bodyPart:"ureter", department:"uro", keywords:["ইউরেটারে পাথর","ureteric stone","ureter stone","ইউরেটার"] },
+  { id:"dis200", name:"মূত্রথলির পাথর", nameEn:"Bladder Stone", bodyPart:"bladder", department:"uro", keywords:["মূত্রথলির পাথর","bladder stone","urinary bladder stone","মূত্রথলি"] },
+  { id:"dis201", name:"মূত্রনালির সংক্রমণ", nameEn:"Urinary Tract Infection (UTI)", bodyPart:"urinary", department:"uro", keywords:["মূত্রনালির সংক্রমণ","UTI","urinary tract infection","প্রস্রাব"] },
+  { id:"dis202", name:"প্রস্রাবে জ্বালাপোড়া", nameEn:"Burning Urination", bodyPart:"urinary", department:"uro", keywords:["প্রস্রাবে জ্বালাপোড়া","burning urination","burning urine","প্রস্রাব"] },
+  { id:"dis203", name:"প্রস্রাবে রক্ত", nameEn:"Hematuria", bodyPart:"urinary", department:"uro", keywords:["প্রস্রাবে রক্ত","hematuria","blood in urine","প্রস্রাব"] },
+  { id:"dis204", name:"ঘন ঘন প্রস্রাব", nameEn:"Frequent Urination", bodyPart:"urinary", department:"uro", keywords:["ঘন ঘন প্রস্রাব","frequent urination","frequent urine","প্রস্রাব"] },
+  { id:"dis205", name:"প্রস্রাব আটকে যাওয়া", nameEn:"Urinary Retention", bodyPart:"urinary", department:"uro", keywords:["প্রস্রাব আটকে যাওয়া","urinary retention","unable to urinate","প্রস্রাব"] },
+  { id:"dis206", name:"প্রস্রাব ধরে রাখতে না পারা", nameEn:"Urinary Incontinence", bodyPart:"urinary", department:"uro", keywords:["প্রস্রাব ধরে রাখতে না পারা","urinary incontinence","incontinence","প্রস্রাব"] },
+  { id:"dis207", name:"অতিরিক্ত প্রস্রাব", nameEn:"Polyuria", bodyPart:"urinary", department:"uro", keywords:["অতিরিক্ত প্রস্রাব","polyuria","excessive urination","প্রস্রাব"] },
+  { id:"dis208", name:"প্রোস্টেট বড় হওয়া", nameEn:"Benign Prostatic Hyperplasia (BPH)", bodyPart:"prostate", department:"uro", keywords:["প্রোস্টেট বড় হওয়া","BPH","benign prostatic hyperplasia","প্রোস্টেট"] },
+  { id:"dis209", name:"প্রোস্টেটের প্রদাহ", nameEn:"Prostatitis", bodyPart:"prostate", department:"uro", keywords:["প্রোস্টেটের প্রদাহ","prostatitis","prostate inflammation","প্রোস্টেট"] },
+  { id:"dis210", name:"প্রোস্টেট ক্যান্সার", nameEn:"Prostate Cancer", bodyPart:"prostate", department:"uro", keywords:["প্রোস্টেট ক্যান্সার","prostate cancer","prostate tumor","প্রোস্টেট"] },
+  { id:"dis211", name:"মূত্রথলির ক্যান্সার", nameEn:"Bladder Cancer", bodyPart:"bladder", department:"uro", keywords:["মূত্রথলির ক্যান্সার","bladder cancer","bladder tumor","মূত্রথলি"] },
+  { id:"dis212", name:"কিডনি ক্যান্সার", nameEn:"Kidney Cancer", bodyPart:"kidney", department:"uro", keywords:["কিডনি ক্যান্সার","kidney cancer","renal cancer","কিডনি"] },
+  { id:"dis213", name:"হাইড্রোসিল", nameEn:"Hydrocele", bodyPart:"testicle", department:"uro", keywords:["হাইড্রোসিল","hydrocele","testicle swelling","অণ্ডকোষ"] },
+  { id:"dis214", name:"ভ্যারিকোসিল", nameEn:"Varicocele", bodyPart:"testicle", department:"uro", keywords:["ভ্যারিকোসিল","varicocele","testicle veins","অণ্ডকোষ"] },
+  { id:"dis215", name:"ফিমোসিস", nameEn:"Phimosis", bodyPart:"penis", department:"uro", keywords:["ফিমোসিস","phimosis","tight foreskin","লিঙ্গ"] },
+  { id:"dis216", name:"প্যারাফিমোসিস", nameEn:"Paraphimosis", bodyPart:"penis", department:"uro", keywords:["প্যারাফিমোসিস","paraphimosis","foreskin","লিঙ্গ"] },
+  { id:"dis217", name:"ইরেক্টাইল ডিসফাংশন", nameEn:"Erectile Dysfunction", bodyPart:"male", department:"uro", keywords:["ইরেক্টাইল ডিসফাংশন","erectile dysfunction","ED","পুরুষ"] },
+  { id:"dis218", name:"পুরুষ বন্ধ্যাত্ব", nameEn:"Male Infertility", bodyPart:"male", department:"uro", keywords:["পুরুষ বন্ধ্যাত্ব","male infertility","infertility","পুরুষ"] },
+  { id:"dis219", name:"অকাল বীর্যপাত", nameEn:"Premature Ejaculation", bodyPart:"male", department:"uro", keywords:["অকাল বীর্যপাত","premature ejaculation","PE","পুরুষ"] },
+  { id:"dis220", name:"মূত্রনালির সংকোচন", nameEn:"Urethral Stricture", bodyPart:"urethra", department:"uro", keywords:["মূত্রনালির সংকোচন","urethral stricture","urethra","মূত্রনালি"] },
+  { id:"dis221", name:"অণ্ডকোষে ব্যথা", nameEn:"Testicular Pain", bodyPart:"testicle", department:"uro", keywords:["অণ্ডকোষে ব্যথা","testicular pain","testicle pain","অণ্ডকোষ"] },
+  { id:"dis222", name:"অণ্ডকোষের প্রদাহ", nameEn:"Orchitis", bodyPart:"testicle", department:"uro", keywords:["অণ্ডকোষের প্রদাহ","orchitis","testicle inflammation","অণ্ডকোষ"] },
+  { id:"dis223", name:"এপিডিডাইমাইটিস", nameEn:"Epididymitis", bodyPart:"testicle", department:"uro", keywords:["এপিডিডাইমাইটিস","epididymitis","epididymis","অণ্ডকোষ"] },
+  { id:"dis224", name:"টেস্টিকুলার টর্শন", nameEn:"Testicular Torsion", bodyPart:"testicle", department:"uro", keywords:["টেস্টিকুলার টর্শন","testicular torsion","twisted testicle","অণ্ডকোষ"] },
+  { id:"dis225", name:"টেস্টিকুলার ক্যান্সার", nameEn:"Testicular Cancer", bodyPart:"testicle", department:"uro", keywords:["টেস্টিকুলার ক্যান্সার","testicular cancer","testicle cancer","অণ্ডকোষ"] },
+  { id:"dis226", name:"অতিসক্রিয় মূত্রথলি", nameEn:"Overactive Bladder", bodyPart:"bladder", department:"uro", keywords:["অতিসক্রিয় মূত্রথলি","overactive bladder","OAB","মূত্রথলি"] },
+  { id:"dis227", name:"নিউরোজেনিক ব্লাডার", nameEn:"Neurogenic Bladder", bodyPart:"bladder", department:"uro", keywords:["নিউরোজেনিক ব্লাডার","neurogenic bladder","bladder dysfunction","মূত্রথলি"] },
+
+  // ── স্ত্রীরোগ – gynae ──
+  { id:"dis228", name:"গর্ভাবস্থা", nameEn:"Pregnancy", bodyPart:"uterus", department:"gynae", keywords:["গর্ভাবস্থা","pregnancy","গর্ভ","প্রেগন্যান্সি"] },
+  { id:"dis229", name:"উচ্চ ঝুঁকির গর্ভাবস্থা", nameEn:"High-Risk Pregnancy", bodyPart:"uterus", department:"gynae", keywords:["উচ্চ ঝুঁকির গর্ভাবস্থা","high-risk pregnancy","pregnancy"] },
+  { id:"dis230", name:"বন্ধ্যাত্ব", nameEn:"Infertility", bodyPart:"female", department:"gynae", keywords:["বন্ধ্যাত্ব","infertility","conceive","গর্ভধারণ"] },
+  { id:"dis231", name:"পলিসিস্টিক ওভারি সিনড্রোম", nameEn:"Polycystic Ovary Syndrome (PCOS)", bodyPart:"ovary", department:"gynae", keywords:["পিসিওএস","PCOS","polycystic ovary syndrome","ডিম্বাশয়"] },
+  { id:"dis232", name:"পলিসিস্টিক ওভারি ডিজিজ", nameEn:"Polycystic Ovarian Disease (PCOD)", bodyPart:"ovary", department:"gynae", keywords:["পিসিওডি","PCOD","polycystic ovarian disease","ডিম্বাশয়"] },
+  { id:"dis233", name:"মাসিক অনিয়ম", nameEn:"Irregular Menstruation", bodyPart:"uterus", department:"gynae", keywords:["মাসিক অনিয়ম","irregular menstruation","irregular period","ঋতুচক্র"] },
+  { id:"dis234", name:"অতিরিক্ত মাসিক রক্তক্ষরণ", nameEn:"Menorrhagia", bodyPart:"uterus", department:"gynae", keywords:["অতিরিক্ত মাসিক","menorrhagia","heavy bleeding","period"] },
+  { id:"dis235", name:"মাসিক বন্ধ হওয়া", nameEn:"Amenorrhea", bodyPart:"uterus", department:"gynae", keywords:["মাসিক বন্ধ","amenorrhea","absence of menstruation","period"] },
+  { id:"dis236", name:"ব্যথাযুক্ত মাসিক", nameEn:"Dysmenorrhea", bodyPart:"uterus", department:"gynae", keywords:["ব্যথাযুক্ত মাসিক","dysmenorrhea","painful period","period pain"] },
+  { id:"dis237", name:"তলপেটে ব্যথা", nameEn:"Pelvic Pain", bodyPart:"pelvis", department:"gynae", keywords:["তলপেটে ব্যথা","pelvic pain","pelvis","পেলভিস"] },
+  { id:"dis238", name:"জরায়ুর ফাইব্রয়েড", nameEn:"Uterine Fibroid", bodyPart:"uterus", department:"gynae", keywords:["জরায়ুর ফাইব্রয়েড","uterine fibroid","fibroid","জরায়ু"] },
+  { id:"dis239", name:"ডিম্বাশয়ের সিস্ট", nameEn:"Ovarian Cyst", bodyPart:"ovary", department:"gynae", keywords:["ডিম্বাশয়ের সিস্ট","ovarian cyst","ovary cyst","ডিম্বাশয়"] },
+  { id:"dis240", name:"এন্ডোমেট্রিওসিস", nameEn:"Endometriosis", bodyPart:"uterus", department:"gynae", keywords:["এন্ডোমেট্রিওসিস","endometriosis","endometrium","জরায়ু"] },
+  { id:"dis241", name:"এডেনোমায়োসিস", nameEn:"Adenomyosis", bodyPart:"uterus", department:"gynae", keywords:["এডেনোমায়োসিস","adenomyosis","uterus","জরায়ু"] },
+  { id:"dis242", name:"সাদা স্রাব", nameEn:"Leucorrhoea", bodyPart:"vagina", department:"gynae", keywords:["সাদা স্রাব","leucorrhoea","white discharge","যোনি"] },
+  { id:"dis243", name:"যোনি সংক্রমণ", nameEn:"Vaginal Infection", bodyPart:"vagina", department:"gynae", keywords:["যোনি সংক্রমণ","vaginal infection","vaginitis","যোনি"] },
+  { id:"dis244", name:"সার্ভিসাইটিস", nameEn:"Cervicitis", bodyPart:"cervix", department:"gynae", keywords:["সার্ভিসাইটিস","cervicitis","cervix inflammation","জরায়ুমুখ"] },
+  { id:"dis245", name:"পেলভিক ইনফ্ল্যামেটরি ডিজিজ", nameEn:"Pelvic Inflammatory Disease (PID)", bodyPart:"pelvis", department:"gynae", keywords:["PID","pelvic inflammatory disease","পেলভিক ইনফ্ল্যামেটরি ডিজিজ","পেলভিস"] },
+  { id:"dis246", name:"জরায়ু নিচে নেমে আসা", nameEn:"Uterine Prolapse", bodyPart:"uterus", department:"gynae", keywords:["জরায়ু নিচে নেমে আসা","uterine prolapse","prolapse","জরায়ু"] },
+  { id:"dis247", name:"একটোপিক গর্ভাবস্থা", nameEn:"Ectopic Pregnancy", bodyPart:"fallopian", department:"gynae", keywords:["একটোপিক গর্ভাবস্থা","ectopic pregnancy","ফ্যালোপিয়ান টিউব","pregnancy"] },
+  { id:"dis248", name:"গর্ভপাত", nameEn:"Miscarriage", bodyPart:"uterus", department:"gynae", keywords:["গর্ভপাত","miscarriage","pregnancy loss","গর্ভ"] },
+  { id:"dis249", name:"বারবার গর্ভপাত", nameEn:"Recurrent Pregnancy Loss", bodyPart:"uterus", department:"gynae", keywords:["বারবার গর্ভপাত","recurrent pregnancy loss","recurrent miscarriage"] },
+  { id:"dis250", name:"মেনোপজ সমস্যা", nameEn:"Menopause Disorders", bodyPart:"female", department:"gynae", keywords:["মেনোপজ","menopause","menopause disorders","রজোনিবৃত্তি"] },
+  { id:"dis251", name:"প্রি-এক্লাম্পসিয়া", nameEn:"Preeclampsia", bodyPart:"uterus", department:"gynae", keywords:["প্রি-এক্লাম্পসিয়া","preeclampsia","pregnancy hypertension","গর্ভাবস্থা"] },
+  { id:"dis252", name:"এক্লাম্পসিয়া", nameEn:"Eclampsia", bodyPart:"uterus", department:"gynae", keywords:["এক্লাম্পসিয়া","eclampsia","pregnancy seizure","গর্ভাবস্থা"] },
+  { id:"dis253", name:"গর্ভকালীন ডায়াবেটিস", nameEn:"Gestational Diabetes", bodyPart:"uterus", department:"gynae", keywords:["গর্ভকালীন ডায়াবেটিস","gestational diabetes","pregnancy diabetes"] },
+  { id:"dis254", name:"গর্ভকালীন উচ্চ রক্তচাপ", nameEn:"Gestational Hypertension", bodyPart:"uterus", department:"gynae", keywords:["গর্ভকালীন উচ্চ রক্তচাপ","gestational hypertension","pregnancy hypertension"] },
+  { id:"dis255", name:"সার্ভিক্যাল ক্যান্সার", nameEn:"Cervical Cancer", bodyPart:"cervix", department:"gynae", keywords:["সার্ভিক্যাল ক্যান্সার","cervical cancer","cervix cancer","জরায়ুমুখ"] },
+  { id:"dis256", name:"জরায়ুর ক্যান্সার", nameEn:"Uterine Cancer", bodyPart:"uterus", department:"gynae", keywords:["জরায়ুর ক্যান্সার","uterine cancer","endometrial cancer","জরায়ু"] },
+  { id:"dis257", name:"ডিম্বাশয়ের ক্যান্সার", nameEn:"Ovarian Cancer", bodyPart:"ovary", department:"gynae", keywords:["ডিম্বাশয়ের ক্যান্সার","ovarian cancer","ovary cancer","ডিম্বাশয়"] },
+
+  // ── হাড় / জয়েন্ট – ortho ──
+  { id:"dis258", name:"হাড় ভাঙা", nameEn:"Bone Fracture", bodyPart:"bone", department:"ortho", keywords:["হাড় ভাঙা","bone fracture","fracture","হাড়"] },
+  { id:"dis259", name:"হাড়ে চিড়", nameEn:"Bone Crack", bodyPart:"bone", department:"ortho", keywords:["হাড়ে চিড়","bone crack","hairline fracture","হাড়"] },
+  { id:"dis260", name:"হাড় ক্ষয়", nameEn:"Osteoporosis", bodyPart:"bone", department:"ortho", keywords:["হাড় ক্ষয়","osteoporosis","bone loss","হাড়"] },
+  { id:"dis261", name:"অস্টিওআর্থ্রাইটিস", nameEn:"Osteoarthritis", bodyPart:"joint", department:"ortho", keywords:["অস্টিওআর্থ্রাইটিস","osteoarthritis","OA","জয়েন্ট"] },
+  { id:"dis262", name:"রিউমাটয়েড আর্থ্রাইটিস", nameEn:"Rheumatoid Arthritis", bodyPart:"joint", department:"ortho", keywords:["রিউমাটয়েড আর্থ্রাইটিস","rheumatoid arthritis","RA","জয়েন্ট"] },
+  { id:"dis263", name:"গাউট", nameEn:"Gout", bodyPart:"joint", department:"ortho", keywords:["গাউট","gout","uric acid","জয়েন্ট"] },
+  { id:"dis264", name:"হাঁটু ব্যথা", nameEn:"Knee Pain", bodyPart:"knee", department:"ortho", keywords:["হাঁটু ব্যথা","knee pain","হাঁটু"] },
+  { id:"dis265", name:"কোমর ব্যথা", nameEn:"Low Back Pain", bodyPart:"spine", department:"ortho", keywords:["কোমর ব্যথা","low back pain","back pain","কোমর"] },
+  { id:"dis266", name:"ঘাড় ব্যথা", nameEn:"Neck Pain", bodyPart:"neck", department:"ortho", keywords:["ঘাড় ব্যথা","neck pain","ঘাড়"] },
+  { id:"dis267", name:"মেরুদণ্ডের ব্যথা", nameEn:"Spinal Pain", bodyPart:"spine", department:"ortho", keywords:["মেরুদণ্ডের ব্যথা","spinal pain","spine pain","মেরুদণ্ড"] },
+  { id:"dis268", name:"স্লিপ ডিস্ক", nameEn:"Slipped Disc", bodyPart:"spine", department:"ortho", keywords:["স্লিপ ডিস্ক","slipped disc","disc prolapse","মেরুদণ্ড"] },
+  { id:"dis269", name:"স্পন্ডাইলোসিস", nameEn:"Spondylosis", bodyPart:"spine", department:"ortho", keywords:["স্পন্ডাইলোসিস","spondylosis","spine","মেরুদণ্ড"] },
+  { id:"dis270", name:"সার্ভাইক্যাল স্পন্ডাইলোসিস", nameEn:"Cervical Spondylosis", bodyPart:"neck", department:"ortho", keywords:["সার্ভাইক্যাল স্পন্ডাইলোসিস","cervical spondylosis","ঘাড়","neck"] },
+  { id:"dis271", name:"লাম্বার স্পন্ডাইলোসিস", nameEn:"Lumbar Spondylosis", bodyPart:"spine", department:"ortho", keywords:["লাম্বার স্পন্ডাইলোসিস","lumbar spondylosis","কোমর","spine"] },
+  { id:"dis272", name:"ফ্রোজেন শোল্ডার", nameEn:"Frozen Shoulder", bodyPart:"shoulder", department:"ortho", keywords:["ফ্রোজেন শোল্ডার","frozen shoulder","shoulder stiffness","কাঁধ"] },
+  { id:"dis273", name:"টেনিস এলবো", nameEn:"Tennis Elbow", bodyPart:"elbow", department:"ortho", keywords:["টেনিস এলবো","tennis elbow","elbow pain","কনুই"] },
+  { id:"dis274", name:"গলফারস এলবো", nameEn:"Golfer's Elbow", bodyPart:"elbow", department:"ortho", keywords:["গলফারস এলবো","golfer's elbow","medial epicondylitis","কনুই"] },
+  { id:"dis275", name:"কার্পাল টানেল সিনড্রোম", nameEn:"Carpal Tunnel Syndrome", bodyPart:"wrist", department:"ortho", keywords:["কার্পাল টানেল সিনড্রোম","carpal tunnel syndrome","CTS","কবজি"] },
+  { id:"dis276", name:"লিগামেন্ট ইনজুরি", nameEn:"Ligament Injury", bodyPart:"ligament", department:"ortho", keywords:["লিগামেন্ট ইনজুরি","ligament injury","ligament tear"] },
+  { id:"dis277", name:"এমসিএল ইনজুরি", nameEn:"MCL Injury", bodyPart:"knee", department:"ortho", keywords:["এমসিএল ইনজুরি","MCL injury","medial collateral ligament","হাঁটু"] },
+  { id:"dis278", name:"এসিএল ইনজুরি", nameEn:"ACL Injury", bodyPart:"knee", department:"ortho", keywords:["এসিএল ইনজুরি","ACL injury","anterior cruciate ligament","হাঁটু"] },
+  { id:"dis279", name:"মেনিস্কাস ইনজুরি", nameEn:"Meniscus Injury", bodyPart:"knee", department:"ortho", keywords:["মেনিস্কাস ইনজুরি","meniscus injury","meniscus tear","হাঁটু"] },
+  { id:"dis280", name:"ডিসলোকেশন", nameEn:"Joint Dislocation", bodyPart:"joint", department:"ortho", keywords:["ডিসলোকেশন","joint dislocation","dislocated joint","জয়েন্ট"] },
+  { id:"dis281", name:"জয়েন্টে প্রদাহ", nameEn:"Joint Inflammation", bodyPart:"joint", department:"ortho", keywords:["জয়েন্টে প্রদাহ","joint inflammation","swollen joint","জয়েন্ট"] },
+  { id:"dis282", name:"বাত রোগ", nameEn:"Arthritis", bodyPart:"joint", department:"ortho", keywords:["বাত রোগ","arthritis","joint pain","জয়েন্ট"] },
+  { id:"dis283", name:"হিল পেইন", nameEn:"Heel Pain", bodyPart:"heel", department:"ortho", keywords:["হিল পেইন","heel pain","heel","গোড়ালি"] },
+  { id:"dis284", name:"প্লান্টার ফ্যাসাইটিস", nameEn:"Plantar Fasciitis", bodyPart:"foot", department:"ortho", keywords:["প্লান্টার ফ্যাসাইটিস","plantar fasciitis","foot pain","পা"] },
+  { id:"dis285", name:"হাড়ের সংক্রমণ", nameEn:"Osteomyelitis", bodyPart:"bone", department:"ortho", keywords:["হাড়ের সংক্রমণ","osteomyelitis","bone infection","হাড়"] },
+  { id:"dis286", name:"হাড়ের টিউমার", nameEn:"Bone Tumor", bodyPart:"bone", department:"ortho", keywords:["হাড়ের টিউমার","bone tumor","bone cancer","হাড়"] },
+  { id:"dis287", name:"কাঁধের ব্যথা", nameEn:"Shoulder Pain", bodyPart:"shoulder", department:"ortho", keywords:["কাঁধের ব্যথা","shoulder pain","shoulder","কাঁধ"] },
+
+  // ── চর্মরোগ – dermo ──
+  { id:"dis289", name:"একজিমা", nameEn:"Eczema", bodyPart:"skin", department:"dermo", keywords:["একজিমা","eczema","atopic dermatitis","চামড়া"] },
+  { id:"dis290", name:"সোরিয়াসিস", nameEn:"Psoriasis", bodyPart:"skin", department:"dermo", keywords:["সোরিয়াসিস","psoriasis","ত্বক","চামড়া"] },
+  { id:"dis291", name:"ব্রণ", nameEn:"Acne", bodyPart:"skin", department:"dermo", keywords:["ব্রণ","acne","pimple","মুখ"] },
+  { id:"dis292", name:"এলার্জি", nameEn:"Skin Allergy", bodyPart:"skin", department:"dermo", keywords:["এলার্জি","skin allergy","allergy","চুলকানি"] },
+  { id:"dis293", name:"ফাঙ্গাল সংক্রমণ", nameEn:"Fungal Infection", bodyPart:"skin", department:"dermo", keywords:["ফাঙ্গাল সংক্রমণ","fungal infection","fungus","চামড়া"] },
+  { id:"dis294", name:"দাদ", nameEn:"Ringworm", bodyPart:"skin", department:"dermo", keywords:["দাদ","ringworm","tinea","ফাঙ্গাল"] },
+  { id:"dis295", name:"চুলকানি", nameEn:"Itching", bodyPart:"skin", department:"dermo", keywords:["চুলকানি","itching","pruritus","চামড়া"] },
+  { id:"dis296", name:"আমবাত", nameEn:"Urticaria", bodyPart:"skin", department:"dermo", keywords:["আমবাত","urticaria","hives","এলার্জি"] },
+  { id:"dis297", name:"ভিটিলিগো", nameEn:"Vitiligo", bodyPart:"skin", department:"dermo", keywords:["ভিটিলিগো","vitiligo","সাদা দাগ","চামড়া"] },
+  { id:"dis298", name:"মেছতা", nameEn:"Melasma", bodyPart:"skin", department:"dermo", keywords:["মেছতা","melasma","pigmentation","মুখ"] },
+  { id:"dis299", name:"রোদে পোড়া দাগ", nameEn:"Sunburn", bodyPart:"skin", department:"dermo", keywords:["রোদে পোড়া","sunburn","UV","ত্বক"] },
+  { id:"dis300", name:"ত্বকের শুষ্কতা", nameEn:"Dry Skin", bodyPart:"skin", department:"dermo", keywords:["ত্বকের শুষ্কতা","dry skin","xerosis","চামড়া"] },
+  { id:"dis301", name:"খুশকি", nameEn:"Dandruff", bodyPart:"hair", department:"dermo", keywords:["খুশকি","dandruff","scalp","চুল"] },
+  { id:"dis302", name:"চুল পড়া", nameEn:"Hair Loss", bodyPart:"hair", department:"dermo", keywords:["চুল পড়া","hair loss","hair fall","চুল"] },
+  { id:"dis303", name:"অ্যালোপেসিয়া", nameEn:"Alopecia", bodyPart:"hair", department:"dermo", keywords:["অ্যালোপেসিয়া","alopecia","hair loss","টাক"] },
+  { id:"dis304", name:"নখের ছত্রাক", nameEn:"Nail Fungus", bodyPart:"nail", department:"dermo", keywords:["নখের ছত্রাক","nail fungus","onychomycosis","নখ"] },
+  { id:"dis305", name:"ইনগ্রোন নখ", nameEn:"Ingrown Nail", bodyPart:"nail", department:"dermo", keywords:["ইনগ্রোন নখ","ingrown nail","নখ","toe nail"] },
+  { id:"dis306", name:"ফোঁড়া", nameEn:"Boil", bodyPart:"skin", department:"dermo", keywords:["ফোঁড়া","boil","furuncle","চামড়া"] },
+  { id:"dis307", name:"কার্বাঙ্কল", nameEn:"Carbuncle", bodyPart:"skin", department:"dermo", keywords:["কার্বাঙ্কল","carbuncle","boil","চামড়া"] },
+  { id:"dis308", name:"ওয়ার্ট", nameEn:"Wart", bodyPart:"skin", department:"dermo", keywords:["ওয়ার্ট","wart","HPV wart","চামড়া"] },
+  { id:"dis309", name:"কর্ন", nameEn:"Corn", bodyPart:"foot", department:"dermo", keywords:["কর্ন","corn","foot corn","পা"] },
+  { id:"dis310", name:"স্ক্যাবিস", nameEn:"Scabies", bodyPart:"skin", department:"dermo", keywords:["স্ক্যাবিস","scabies","mite","চুলকানি"] },
+  { id:"dis311", name:"হারপিস", nameEn:"Herpes", bodyPart:"skin", department:"dermo", keywords:["হারপিস","herpes","HSV","ফোসকা"] },
+  { id:"dis312", name:"শিংলস", nameEn:"Shingles", bodyPart:"skin", department:"dermo", keywords:["শিংলস","shingles","herpes zoster","চামড়া"] },
+  { id:"dis313", name:"ইমপেটিগো", nameEn:"Impetigo", bodyPart:"skin", department:"dermo", keywords:["ইমপেটিগো","impetigo","bacterial skin infection","চামড়া"] },
+  { id:"dis314", name:"সেলুলাইটিস", nameEn:"Cellulitis", bodyPart:"skin", department:"dermo", keywords:["সেলুলাইটিস","cellulitis","skin infection","চামড়া"] },
+  { id:"dis315", name:"লিউকোডার্মা", nameEn:"Leucoderma", bodyPart:"skin", department:"dermo", keywords:["লিউকোডার্মা","leucoderma","white patch","চামড়া"] },
+  { id:"dis316", name:"ত্বকের ক্যান্সার", nameEn:"Skin Cancer", bodyPart:"skin", department:"dermo", keywords:["ত্বকের ক্যান্সার","skin cancer","melanoma","চামড়া"] },
+  { id:"dis317", name:"জন্মদাগ", nameEn:"Birthmark", bodyPart:"skin", department:"dermo", keywords:["জন্মদাগ","birthmark","nevus","চামড়া"] },
+  { id:"dis318", name:"সেবোরেইক ডার্মাটাইটিস", nameEn:"Seborrheic Dermatitis", bodyPart:"skin", department:"dermo", keywords:["সেবোরেইক ডার্মাটাইটিস","seborrheic dermatitis","seborrhea","স্ক্যাল্প"] },
+
+  // ── ডায়াবেটিস / এন্ডোক্রাইন – endo ──
+  { id:"dis319", name:"ডায়াবেটিস", nameEn:"Diabetes Mellitus", bodyPart:"pancreas", department:"endo", keywords:["ডায়াবেটিস","diabetes","diabetes mellitus","blood sugar","চিনি"] },
+  { id:"dis320", name:"টাইপ-১ ডায়াবেটিস", nameEn:"Type 1 Diabetes", bodyPart:"pancreas", department:"endo", keywords:["টাইপ-১ ডায়াবেটিস","type 1 diabetes","T1DM","ডায়াবেটিস"] },
+  { id:"dis321", name:"টাইপ-২ ডায়াবেটিস", nameEn:"Type 2 Diabetes", bodyPart:"pancreas", department:"endo", keywords:["টাইপ-২ ডায়াবেটিস","type 2 diabetes","T2DM","ডায়াবেটিস"] },
+  { id:"dis322", name:"প্রিডায়াবেটিস", nameEn:"Prediabetes", bodyPart:"pancreas", department:"endo", keywords:["প্রিডায়াবেটিস","prediabetes","high blood sugar","ডায়াবেটিস"] },
+  { id:"dis323", name:"হাইপোগ্লাইসেমিয়া", nameEn:"Hypoglycemia", bodyPart:"pancreas", department:"endo", keywords:["হাইপোগ্লাইসেমিয়া","hypoglycemia","low blood sugar","চিনি"] },
+  { id:"dis324", name:"হাইপারগ্লাইসেমিয়া", nameEn:"Hyperglycemia", bodyPart:"pancreas", department:"endo", keywords:["হাইপারগ্লাইসেমিয়া","hyperglycemia","high blood sugar","চিনি"] },
+  { id:"dis325", name:"হাইপোথাইরয়েডিজম", nameEn:"Hypothyroidism", bodyPart:"thyroid", department:"endo", keywords:["হাইপোথাইরয়েডিজম","hypothyroidism","low thyroid","থাইরয়েড"] },
+  { id:"dis326", name:"হাইপারথাইরয়েডিজম", nameEn:"Hyperthyroidism", bodyPart:"thyroid", department:"endo", keywords:["হাইপারথাইরয়েডিজম","hyperthyroidism","overactive thyroid","থাইরয়েড"] },
+  { id:"dis327", name:"গয়টার", nameEn:"Goiter", bodyPart:"thyroid", department:"endo", keywords:["গয়টার","goiter","thyroid enlargement","থাইরয়েড"] },
+  { id:"dis328", name:"থাইরয়েড নডিউল", nameEn:"Thyroid Nodule", bodyPart:"thyroid", department:"endo", keywords:["থাইরয়েড নডিউল","thyroid nodule","thyroid lump","থাইরয়েড"] },
+  { id:"dis329", name:"থাইরয়েড সিস্ট", nameEn:"Thyroid Cyst", bodyPart:"thyroid", department:"endo", keywords:["থাইরয়েড সিস্ট","thyroid cyst","thyroid","থাইরয়েড"] },
+  { id:"dis330", name:"হাশিমোটো থাইরয়ডাইটিস", nameEn:"Hashimoto's Thyroiditis", bodyPart:"thyroid", department:"endo", keywords:["হাশিমোটো","hashimoto","hashimoto's thyroiditis","থাইরয়েড"] },
+  { id:"dis331", name:"গ্রেভস ডিজিজ", nameEn:"Graves' Disease", bodyPart:"thyroid", department:"endo", keywords:["গ্রেভস ডিজিজ","graves disease","hyperthyroidism","থাইরয়েড"] },
+  { id:"dis332", name:"থাইরয়েড ক্যান্সার", nameEn:"Thyroid Cancer", bodyPart:"thyroid", department:"endo", keywords:["থাইরয়েড ক্যান্সার","thyroid cancer","thyroid tumor","থাইরয়েড"] },
+  { id:"dis333", name:"স্থূলতা", nameEn:"Obesity", bodyPart:"general", department:"endo", keywords:["স্থূলতা","obesity","overweight","ওজন"] },
+  { id:"dis334", name:"মেটাবলিক সিনড্রোম", nameEn:"Metabolic Syndrome", bodyPart:"general", department:"endo", keywords:["মেটাবলিক সিনড্রোম","metabolic syndrome","metabolism"] },
+  { id:"dis335", name:"কুশিং সিনড্রোম", nameEn:"Cushing's Syndrome", bodyPart:"adrenal", department:"endo", keywords:["কুশিং সিনড্রোম","cushing syndrome","cortisol","adrenal"] },
+  { id:"dis336", name:"অ্যাডিসন রোগ", nameEn:"Addison's Disease", bodyPart:"adrenal", department:"endo", keywords:["অ্যাডিসন রোগ","addison's disease","adrenal insufficiency","adrenal"] },
+  { id:"dis337", name:"পিটুইটারি টিউমার", nameEn:"Pituitary Tumor", bodyPart:"pituitary", department:"endo", keywords:["পিটুইটারি টিউমার","pituitary tumor","pituitary gland"] },
+  { id:"dis338", name:"প্রোল্যাক্টিনোমা", nameEn:"Prolactinoma", bodyPart:"pituitary", department:"endo", keywords:["প্রোল্যাক্টিনোমা","prolactinoma","pituitary","prolactin"] },
+  { id:"dis339", name:"অ্যাক্রোমেগালি", nameEn:"Acromegaly", bodyPart:"pituitary", department:"endo", keywords:["অ্যাক্রোমেগালি","acromegaly","growth hormone","pituitary"] },
+  { id:"dis340", name:"জায়ান্টিজম", nameEn:"Gigantism", bodyPart:"pituitary", department:"endo", keywords:["জায়ান্টিজম","gigantism","growth hormone","pituitary"] },
+  { id:"dis341", name:"হাইপারপ্যারাথাইরয়েডিজম", nameEn:"Hyperparathyroidism", bodyPart:"parathyroid", department:"endo", keywords:["হাইপারপ্যারাথাইরয়েডিজম","hyperparathyroidism","parathyroid"] },
+  { id:"dis342", name:"হাইপোপ্যারাথাইরয়েডিজম", nameEn:"Hypoparathyroidism", bodyPart:"parathyroid", department:"endo", keywords:["হাইপোপ্যারাথাইরয়েডিজম","hypoparathyroidism","parathyroid"] },
+  { id:"dis343", name:"অস্টিওপোরোসিস", nameEn:"Osteoporosis", bodyPart:"bone", department:"endo", keywords:["অস্টিওপোরোসিস","osteoporosis","bone loss","হাড়"] },
+  { id:"dis344", name:"ভিটামিন-ডি ঘাটতি", nameEn:"Vitamin D Deficiency", bodyPart:"bone", department:"endo", keywords:["ভিটামিন-ডি ঘাটতি","vitamin d deficiency","vitamin d","হাড়"] },
+  { id:"dis345", name:"হরমোনের ভারসাম্যহীনতা", nameEn:"Hormonal Imbalance", bodyPart:"endocrine", department:"endo", keywords:["হরমোনের ভারসাম্যহীনতা","hormonal imbalance","hormone"] },
+  { id:"dis346", name:"অ্যাড্রিনাল টিউমার", nameEn:"Adrenal Tumor", bodyPart:"adrenal", department:"endo", keywords:["অ্যাড্রিনাল টিউমার","adrenal tumor","adrenal gland"] },
+  { id:"dis347", name:"পিটুইটারি রোগ", nameEn:"Pituitary Disorders", bodyPart:"pituitary", department:"endo", keywords:["পিটুইটারি রোগ","pituitary disorders","pituitary gland"] },
+  { id:"dis348", name:"এন্ডোক্রাইন টিউমার", nameEn:"Endocrine Tumor", bodyPart:"endocrine", department:"endo", keywords:["এন্ডোক্রাইন টিউমার","endocrine tumor","endocrine gland"] },
+
+  // ── শিশু – pediatric ──
+  { id:"dis349", name:"নবজাতকের জন্ডিস", nameEn:"Neonatal Jaundice", bodyPart:"newborn", department:"pediatric", keywords:["নবজাতকের জন্ডিস","neonatal jaundice","জন্ডিস","নবজাতক"] },
+  { id:"dis350", name:"অপরিণত শিশুর সমস্যা", nameEn:"Prematurity", bodyPart:"newborn", department:"pediatric", keywords:["অপরিণত শিশু","prematurity","preterm baby","নবজাতক"] },
+  { id:"dis351", name:"জন্মগত ত্রুটি", nameEn:"Congenital Anomalies", bodyPart:"children", department:"pediatric", keywords:["জন্মগত ত্রুটি","congenital anomalies","birth defect","শিশু"] },
+  { id:"dis352", name:"জ্বর", nameEn:"Fever", bodyPart:"children", department:"pediatric", keywords:["জ্বর","fever","শিশুর জ্বর","child fever"] },
+  { id:"dis353", name:"নিউমোনিয়া", nameEn:"Pneumonia", bodyPart:"lung", department:"pediatric", keywords:["নিউমোনিয়া","pneumonia","ফুসফুস","শ্বাসকষ্ট"] },
+  { id:"dis354", name:"ব্রংকিওলাইটিস", nameEn:"Bronchiolitis", bodyPart:"lung", department:"pediatric", keywords:["ব্রংকিওলাইটিস","bronchiolitis","শ্বাসকষ্ট","ফুসফুস"] },
+  { id:"dis355", name:"হাঁপানি", nameEn:"Childhood Asthma", bodyPart:"lung", department:"pediatric", keywords:["হাঁপানি","childhood asthma","অ্যাজমা","শ্বাসকষ্ট"] },
+  { id:"dis356", name:"ডায়রিয়া", nameEn:"Diarrhea", bodyPart:"intestine", department:"pediatric", keywords:["ডায়রিয়া","diarrhea","পাতলা পায়খানা","শিশু"] },
+  { id:"dis357", name:"আমাশয়", nameEn:"Dysentery", bodyPart:"intestine", department:"pediatric", keywords:["আমাশয়","dysentery","রক্ত আমাশয়","শিশু"] },
+  { id:"dis358", name:"কোষ্ঠকাঠিন্য", nameEn:"Constipation", bodyPart:"intestine", department:"pediatric", keywords:["কোষ্ঠকাঠিন্য","constipation","পায়খানা","শিশু"] },
+  { id:"dis359", name:"শিশুর অপুষ্টি", nameEn:"Malnutrition", bodyPart:"children", department:"pediatric", keywords:["অপুষ্টি","malnutrition","পুষ্টিহীনতা","শিশু"] },
+  { id:"dis360", name:"রক্তশূন্যতা", nameEn:"Anemia", bodyPart:"blood", department:"pediatric", keywords:["রক্তশূন্যতা","anemia","হিমোগ্লোবিন","শিশু"] },
+  { id:"dis361", name:"টাইফয়েড", nameEn:"Typhoid Fever", bodyPart:"intestine", department:"pediatric", keywords:["টাইফয়েড","typhoid","জ্বর","শিশু"] },
+  { id:"dis362", name:"ডেঙ্গু", nameEn:"Dengue Fever", bodyPart:"blood", department:"pediatric", keywords:["ডেঙ্গু","dengue","মশা","জ্বর"] },
+  { id:"dis363", name:"চিকুনগুনিয়া", nameEn:"Chikungunya", bodyPart:"blood", department:"pediatric", keywords:["চিকুনগুনিয়া","chikungunya","জ্বর","জয়েন্ট ব্যথা"] },
+  { id:"dis364", name:"হাম", nameEn:"Measles", bodyPart:"children", department:"pediatric", keywords:["হাম","measles","rash","শিশু"] },
+  { id:"dis365", name:"চিকেনপক্স", nameEn:"Chickenpox", bodyPart:"skin", department:"pediatric", keywords:["চিকেনপক্স","chickenpox","জল বসন্ত","শিশু"] },
+  { id:"dis366", name:"মাম্পস", nameEn:"Mumps", bodyPart:"salivary", department:"pediatric", keywords:["মাম্পস","mumps","গাল ফোলা","শিশু"] },
+  { id:"dis367", name:"রুবেলা", nameEn:"Rubella", bodyPart:"children", department:"pediatric", keywords:["রুবেলা","rubella","জার্মান হাম","শিশু"] },
+  { id:"dis368", name:"হুপিং কাশি", nameEn:"Whooping Cough", bodyPart:"lung", department:"pediatric", keywords:["হুপিং কাশি","whooping cough","pertussis","কাশি"] },
+  { id:"dis369", name:"মেনিনজাইটিস", nameEn:"Meningitis", bodyPart:"brain", department:"pediatric", keywords:["মেনিনজাইটিস","meningitis","মস্তিষ্ক","জ্বর"] },
+  { id:"dis370", name:"খিঁচুনি", nameEn:"Seizure", bodyPart:"brain", department:"pediatric", keywords:["খিঁচুনি","seizure","convulsion","শিশু"] },
+  { id:"dis371", name:"মৃগী রোগ", nameEn:"Epilepsy", bodyPart:"brain", department:"pediatric", keywords:["মৃগী","epilepsy","খিঁচুনি","শিশু"] },
+  { id:"dis372", name:"অটিজম", nameEn:"Autism Spectrum Disorder", bodyPart:"brain", department:"pediatric", keywords:["অটিজম","autism","ASD","শিশু"] },
+  { id:"dis373", name:"এডিএইচডি", nameEn:"ADHD", bodyPart:"brain", department:"pediatric", keywords:["এডিএইচডি","ADHD","মনোযোগ","শিশু"] },
+  { id:"dis374", name:"শিশুর বৃদ্ধি সমস্যা", nameEn:"Growth Disorder", bodyPart:"children", department:"pediatric", keywords:["বৃদ্ধি সমস্যা","growth disorder","growth delay","শিশু"] },
+  { id:"dis375", name:"জন্মগত হৃদরোগ", nameEn:"Congenital Heart Disease", bodyPart:"heart", department:"pediatric", keywords:["জন্মগত হৃদরোগ","congenital heart disease","হার্ট","শিশু"] },
+  { id:"dis376", name:"এলার্জি", nameEn:"Allergy", bodyPart:"immune", department:"pediatric", keywords:["এলার্জি","allergy","rash","শিশু"] },
+  { id:"dis377", name:"কৃমি সংক্রমণ", nameEn:"Worm Infestation", bodyPart:"intestine", department:"pediatric", keywords:["কৃমি","worm infestation","intestinal worms","শিশু"] },
+  { id:"dis378", name:"শিশুর থাইরয়েড সমস্যা", nameEn:"Pediatric Thyroid Disorder", bodyPart:"thyroid", department:"pediatric", keywords:["শিশুর থাইরয়েড","pediatric thyroid disorder","thyroid","শিশু"] },
+
+  // ── সাধারণ মেডিসিন – medicine ──
+  { id:"dis379", name:"ডায়াবেটিস", nameEn:"Diabetes Mellitus", bodyPart:"pancreas", department:"medicine", keywords:["ডায়াবেটিস","diabetes","diabetes mellitus","blood sugar","চিনি"] },
+  { id:"dis380", name:"উচ্চ রক্তচাপ", nameEn:"Hypertension", bodyPart:"heart", department:"medicine", keywords:["উচ্চ রক্তচাপ","hypertension","high blood pressure","বিপি"] },
+  { id:"dis381", name:"নিম্ন রক্তচাপ", nameEn:"Hypotension", bodyPart:"heart", department:"medicine", keywords:["নিম্ন রক্তচাপ","hypotension","low blood pressure","বিপি"] },
+  { id:"dis382", name:"জ্বর", nameEn:"Fever", bodyPart:"general", department:"medicine", keywords:["জ্বর","fever","তাপমাত্রা","গরম"] },
+  { id:"dis383", name:"ডেঙ্গু", nameEn:"Dengue", bodyPart:"blood", department:"medicine", keywords:["ডেঙ্গু","dengue","মশা","জ্বর"] },
+  { id:"dis384", name:"চিকুনগুনিয়া", nameEn:"Chikungunya", bodyPart:"blood", department:"medicine", keywords:["চিকুনগুনিয়া","chikungunya","জ্বর","জয়েন্ট ব্যথা"] },
+  { id:"dis385", name:"টাইফয়েড", nameEn:"Typhoid Fever", bodyPart:"intestine", department:"medicine", keywords:["টাইফয়েড","typhoid","জ্বর","salmonella"] },
+  { id:"dis386", name:"ম্যালেরিয়া", nameEn:"Malaria", bodyPart:"blood", department:"medicine", keywords:["ম্যালেরিয়া","malaria","mosquito","জ্বর"] },
+  { id:"dis387", name:"রক্তশূন্যতা", nameEn:"Anemia", bodyPart:"blood", department:"medicine", keywords:["রক্তশূন্যতা","anemia","hemoglobin","রক্ত"] },
+  { id:"dis388", name:"হাঁপানি", nameEn:"Asthma", bodyPart:"lung", department:"medicine", keywords:["হাঁপানি","অ্যাজমা","asthma","শ্বাসকষ্ট"] },
+  { id:"dis389", name:"সিওপিডি", nameEn:"COPD", bodyPart:"lung", department:"medicine", keywords:["সিওপিডি","COPD","chronic obstructive pulmonary disease","শ্বাসকষ্ট"] },
+  { id:"dis390", name:"নিউমোনিয়া", nameEn:"Pneumonia", bodyPart:"lung", department:"medicine", keywords:["নিউমোনিয়া","pneumonia","ফুসফুস","শ্বাসকষ্ট"] },
+  { id:"dis391", name:"যক্ষ্মা", nameEn:"Tuberculosis", bodyPart:"lung", department:"medicine", keywords:["যক্ষ্মা","tuberculosis","TB","কাশি"] },
+  { id:"dis392", name:"গ্যাস্ট্রিক", nameEn:"Gastritis", bodyPart:"stomach", department:"medicine", keywords:["গ্যাস্ট্রিক","gastritis","অ্যাসিডিটি","পেট"] },
+  { id:"dis393", name:"পেপটিক আলসার", nameEn:"Peptic Ulcer", bodyPart:"stomach", department:"medicine", keywords:["পেপটিক আলসার","peptic ulcer","ulcer","পেট"] },
+  { id:"dis394", name:"কোষ্ঠকাঠিন্য", nameEn:"Constipation", bodyPart:"intestine", department:"medicine", keywords:["কোষ্ঠকাঠিন্য","constipation","পায়খানা","কঠিন পায়খানা"] },
+  { id:"dis395", name:"ডায়রিয়া", nameEn:"Diarrhea", bodyPart:"intestine", department:"medicine", keywords:["ডায়রিয়া","diarrhea","পাতলা পায়খানা","পেট"] },
+  { id:"dis396", name:"এলার্জি", nameEn:"Allergy", bodyPart:"immune", department:"medicine", keywords:["এলার্জি","allergy","allergic","rash"] },
+  { id:"dis397", name:"ভাইরাল জ্বর", nameEn:"Viral Fever", bodyPart:"general", department:"medicine", keywords:["ভাইরাল জ্বর","viral fever","virus","জ্বর"] },
+  { id:"dis398", name:"ফ্যাটি লিভার", nameEn:"Fatty Liver", bodyPart:"liver", department:"medicine", keywords:["ফ্যাটি লিভার","fatty liver","NAFLD","লিভার"] },
+  { id:"dis399", name:"জন্ডিস", nameEn:"Jaundice", bodyPart:"liver", department:"medicine", keywords:["জন্ডিস","jaundice","yellow eyes","হলুদ"] },
+  { id:"dis400", name:"কিডনি রোগ", nameEn:"Kidney Disease", bodyPart:"kidney", department:"medicine", keywords:["কিডনি রোগ","kidney disease","renal disease","কিডনি"] },
+  { id:"dis401", name:"থাইরয়েড রোগ", nameEn:"Thyroid Disease", bodyPart:"thyroid", department:"medicine", keywords:["থাইরয়েড রোগ","thyroid disease","thyroid","গয়টার"] },
+  { id:"dis402", name:"স্থূলতা", nameEn:"Obesity", bodyPart:"general", department:"medicine", keywords:["স্থূলতা","obesity","overweight","ওজন"] },
+  { id:"dis403", name:"গাউট", nameEn:"Gout", bodyPart:"joint", department:"medicine", keywords:["গাউট","gout","uric acid","জয়েন্ট"] },
+  { id:"dis404", name:"রিউমাটয়েড আর্থ্রাইটিস", nameEn:"Rheumatoid Arthritis", bodyPart:"joint", department:"medicine", keywords:["রিউমাটয়েড আর্থ্রাইটিস","rheumatoid arthritis","RA","বাত"] },
+  { id:"dis405", name:"ভিটামিন-ডি ঘাটতি", nameEn:"Vitamin D Deficiency", bodyPart:"bone", department:"medicine", keywords:["ভিটামিন-ডি ঘাটতি","vitamin d deficiency","vitamin d","হাড়"] },
+  { id:"dis406", name:"দুর্বলতা", nameEn:"General Weakness", bodyPart:"general", department:"medicine", keywords:["দুর্বলতা","general weakness","weakness","অবসাদ"] },
+  { id:"dis407", name:"অজানা কারণে ওজন কমে যাওয়া", nameEn:"Unexplained Weight Loss", bodyPart:"general", department:"medicine", keywords:["ওজন কমে যাওয়া","unexplained weight loss","weight loss","ওজন"] },
+  { id:"dis408", name:"দীর্ঘস্থায়ী ক্লান্তি", nameEn:"Chronic Fatigue", bodyPart:"general", department:"medicine", keywords:["দীর্ঘস্থায়ী ক্লান্তি","chronic fatigue","fatigue","অবসাদ"] },
+
+  // ── মানসিক রোগ – psychiatry ──
+  { id:"dis409", name:"বিষন্নতা", nameEn:"Depression", bodyPart:"brain", department:"psychiatry", keywords:["বিষণ্নতা","ডিপ্রেশন","depression","মন খারাপ"] },
+  { id:"dis410", name:"উদ্বেগজনিত সমস্যা", nameEn:"Anxiety Disorder", bodyPart:"brain", department:"psychiatry", keywords:["উদ্বেগ","anxiety","anxiety disorder","দুশ্চিন্তা"] },
+  { id:"dis411", name:"প্যানিক ডিসঅর্ডার", nameEn:"Panic Disorder", bodyPart:"brain", department:"psychiatry", keywords:["প্যানিক","panic disorder","panic attack","ভয়"] },
+  { id:"dis412", name:"অবসেসিভ কম্পালসিভ ডিসঅর্ডার", nameEn:"Obsessive Compulsive Disorder (OCD)", bodyPart:"brain", department:"psychiatry", keywords:["OCD","obsessive compulsive disorder","অবসেসিভ","কম্পালসিভ"] },
+  { id:"dis413", name:"বাইপোলার ডিসঅর্ডার", nameEn:"Bipolar Disorder", bodyPart:"brain", department:"psychiatry", keywords:["বাইপোলার","bipolar disorder","mood disorder","মানসিক"] },
+  { id:"dis414", name:"সিজোফ্রেনিয়া", nameEn:"Schizophrenia", bodyPart:"brain", department:"psychiatry", keywords:["সিজোফ্রেনিয়া","schizophrenia","psychosis","মানসিক"] },
+  { id:"dis415", name:"অনিদ্রা", nameEn:"Insomnia", bodyPart:"brain", department:"psychiatry", keywords:["অনিদ্রা","insomnia","ঘুম না হওয়া","sleep"] },
+  { id:"dis416", name:"স্ট্রেস", nameEn:"Stress", bodyPart:"brain", department:"psychiatry", keywords:["স্ট্রেস","stress","mental stress","চাপ"] },
+  { id:"dis417", name:"ফোবিয়া", nameEn:"Phobia", bodyPart:"brain", department:"psychiatry", keywords:["ফোবিয়া","phobia","ভয়","fear"] },
+  { id:"dis418", name:"পোস্ট ট্রমাটিক স্ট্রেস ডিসঅর্ডার", nameEn:"Post-Traumatic Stress Disorder (PTSD)", bodyPart:"brain", department:"psychiatry", keywords:["PTSD","post traumatic stress disorder","ট্রমা","মানসিক আঘাত"] },
+  { id:"dis419", name:"অটিজম", nameEn:"Autism Spectrum Disorder", bodyPart:"brain", department:"psychiatry", keywords:["অটিজম","autism","ASD","শিশু"] },
+  { id:"dis420", name:"সামাজিক উদ্বেগ", nameEn:"Social Anxiety Disorder", bodyPart:"brain", department:"psychiatry", keywords:["সামাজিক উদ্বেগ","social anxiety","social anxiety disorder","লজ্জা"] },
+  { id:"dis421", name:"এডিএইচডি", nameEn:"ADHD", bodyPart:"brain", department:"psychiatry", keywords:["এডিএইচডি","ADHD","মনোযোগ","hyperactivity"] },
+  { id:"dis422", name:"ডিমেনশিয়া", nameEn:"Dementia", bodyPart:"brain", department:"psychiatry", keywords:["ডিমেনশিয়া","dementia","স্মৃতিভ্রংশ","memory"] },
+  { id:"dis423", name:"আলঝেইমার রোগ", nameEn:"Alzheimer's Disease", bodyPart:"brain", department:"psychiatry", keywords:["আলঝেইমার","alzheimer","memory loss","ডিমেনশিয়া"] },
+  { id:"dis424", name:"মাদকাসক্তি", nameEn:"Substance Use Disorder", bodyPart:"brain", department:"psychiatry", keywords:["মাদকাসক্তি","substance use disorder","drug addiction","মাদক"] },
+  { id:"dis425", name:"মদ্যপান আসক্তি", nameEn:"Alcohol Use Disorder", bodyPart:"brain", department:"psychiatry", keywords:["মদ্যপান","alcohol use disorder","alcohol addiction","মদ"] },
+  { id:"dis426", name:"খাদ্যাভ্যাসজনিত সমস্যা", nameEn:"Eating Disorder", bodyPart:"brain", department:"psychiatry", keywords:["eating disorder","খাদ্যাভ্যাস","anorexia","bulimia"] },
+  { id:"dis427", name:"আত্মহত্যাপ্রবণ চিন্তা", nameEn:"Suicidal Ideation", bodyPart:"brain", department:"psychiatry", keywords:["আত্মহত্যা","suicidal ideation","suicide thoughts","মানসিক"] },
+  { id:"dis428", name:"ব্যক্তিত্বজনিত সমস্যা", nameEn:"Personality Disorder", bodyPart:"brain", department:"psychiatry", keywords:["personality disorder","ব্যক্তিত্ব","personality","মানসিক"] },
+  { id:"dis429", name:"আচরণগত সমস্যা", nameEn:"Behavioral Disorder", bodyPart:"brain", department:"psychiatry", keywords:["behavioral disorder","আচরণগত সমস্যা","behavior","আচরণ"] },
+  { id:"dis430", name:"স্মৃতিভ্রংশ", nameEn:"Memory Disorder", bodyPart:"brain", department:"psychiatry", keywords:["স্মৃতিভ্রংশ","memory disorder","memory loss","ভুলে যাওয়া"] },
+  { id:"dis431", name:"শিশু-কিশোর মানসিক সমস্যা", nameEn:"Child & Adolescent Mental Disorder", bodyPart:"brain", department:"psychiatry", keywords:["শিশু মানসিক সমস্যা","child mental disorder","adolescent mental disorder","কিশোর"] },
+  { id:"dis432", name:"ঘুমের সমস্যা", nameEn:"Sleep Disorder", bodyPart:"brain", department:"psychiatry", keywords:["ঘুমের সমস্যা","sleep disorder","sleep","অনিদ্রা"] },
+  { id:"dis433", name:"যৌন মানসিক সমস্যা", nameEn:"Psychosexual Disorder", bodyPart:"brain", department:"psychiatry", keywords:["psychosexual disorder","যৌন মানসিক সমস্যা","sexual disorder","মানসিক"] },
+
+  // ── সার্জারি – surgery ──
+  { id:"dis434", name:"অ্যাপেন্ডিসাইটিস", nameEn:"Appendicitis", bodyPart:"appendix", department:"surgery", keywords:["অ্যাপেন্ডিসাইটিস","appendicitis","appendix","তলপেট ব্যথা"] },
+  { id:"dis435", name:"হার্নিয়া", nameEn:"Hernia", bodyPart:"abdomen", department:"surgery", keywords:["হার্নিয়া","hernia","abdominal hernia","পেট"] },
+  { id:"dis436", name:"পিত্তথলির পাথর", nameEn:"Gallstones", bodyPart:"gallbladder", department:"surgery", keywords:["পিত্তথলির পাথর","gallstones","gallbladder stone","গলস্টোন"] },
+  { id:"dis437", name:"পিত্তথলির প্রদাহ", nameEn:"Cholecystitis", bodyPart:"gallbladder", department:"surgery", keywords:["পিত্তথলির প্রদাহ","cholecystitis","gallbladder infection","গলব্লাডার"] },
+  { id:"dis438", name:"পাইলস", nameEn:"Hemorrhoids", bodyPart:"rectum", department:"surgery", keywords:["পাইলস","hemorrhoids","অর্শ","মলদ্বার"] },
+  { id:"dis439", name:"ফিস্টুলা", nameEn:"Anal Fistula", bodyPart:"anus", department:"surgery", keywords:["ফিস্টুলা","anal fistula","মলদ্বার","anus"] },
+  { id:"dis440", name:"ফিশার", nameEn:"Anal Fissure", bodyPart:"anus", department:"surgery", keywords:["ফিশার","anal fissure","মলদ্বার","anus"] },
+  { id:"dis441", name:"লিপোমা", nameEn:"Lipoma", bodyPart:"skin", department:"surgery", keywords:["লিপোমা","lipoma","fat lump","চর্বির টিউমার"] },
+  { id:"dis442", name:"সেবাসিয়াস সিস্ট", nameEn:"Sebaceous Cyst", bodyPart:"skin", department:"surgery", keywords:["সেবাসিয়াস সিস্ট","sebaceous cyst","skin cyst","চামড়া"] },
+  { id:"dis443", name:"অ্যাবসেস", nameEn:"Abscess", bodyPart:"skin", department:"surgery", keywords:["অ্যাবসেস","abscess","pus","ফোঁড়া"] },
+  { id:"dis444", name:"থাইরয়েড নডিউল", nameEn:"Thyroid Nodule", bodyPart:"thyroid", department:"surgery", keywords:["থাইরয়েড নডিউল","thyroid nodule","thyroid lump","থাইরয়েড"] },
+  { id:"dis445", name:"গয়টার", nameEn:"Goiter", bodyPart:"thyroid", department:"surgery", keywords:["গয়টার","goiter","thyroid enlargement","থাইরয়েড"] },
+  { id:"dis446", name:"ব্রেস্ট টিউমার", nameEn:"Breast Tumor", bodyPart:"breast", department:"surgery", keywords:["ব্রেস্ট টিউমার","breast tumor","breast lump","স্তন"] },
+  { id:"dis447", name:"ব্রেস্ট সিস্ট", nameEn:"Breast Cyst", bodyPart:"breast", department:"surgery", keywords:["ব্রেস্ট সিস্ট","breast cyst","breast lump","স্তন"] },
+  { id:"dis448", name:"ব্রেস্ট ক্যান্সার", nameEn:"Breast Cancer", bodyPart:"breast", department:"surgery", keywords:["ব্রেস্ট ক্যান্সার","breast cancer","breast tumor","স্তন"] },
+  { id:"dis449", name:"অন্ত্রে বাধা", nameEn:"Intestinal Obstruction", bodyPart:"intestine", department:"surgery", keywords:["অন্ত্রে বাধা","intestinal obstruction","bowel obstruction","অন্ত্র"] },
+  { id:"dis450", name:"পাকস্থলীর ছিদ্র", nameEn:"Perforated Ulcer", bodyPart:"stomach", department:"surgery", keywords:["পাকস্থলীর ছিদ্র","perforated ulcer","stomach perforation","আলসার"] },
+  { id:"dis451", name:"ভেরিকোজ ভেইন", nameEn:"Varicose Vein", bodyPart:"leg", department:"surgery", keywords:["ভেরিকোজ ভেইন","varicose vein","leg vein","পা"] },
+  { id:"dis452", name:"হাইড্রোসিল", nameEn:"Hydrocele", bodyPart:"scrotum", department:"surgery", keywords:["হাইড্রোসিল","hydrocele","অণ্ডথলি","scrotum"] },
+  { id:"dis453", name:"নরম টিস্যুর টিউমার", nameEn:"Soft Tissue Tumor", bodyPart:"soft_tissue", department:"surgery", keywords:["নরম টিস্যুর টিউমার","soft tissue tumor","soft tissue","tumor"] },
+  { id:"dis454", name:"ত্বকের টিউমার", nameEn:"Skin Tumor", bodyPart:"skin", department:"surgery", keywords:["ত্বকের টিউমার","skin tumor","skin growth","চামড়া"] },
+  { id:"dis455", name:"নখের ইনগ্রোন সমস্যা", nameEn:"Ingrown Toenail", bodyPart:"nail", department:"surgery", keywords:["ইনগ্রোন নখ","ingrown toenail","ingrown nail","নখ"] },
+  { id:"dis456", name:"গ্যাংগ্রিন", nameEn:"Gangrene", bodyPart:"limb", department:"surgery", keywords:["গ্যাংগ্রিন","gangrene","tissue death","হাত","পা"] },
+  { id:"dis457", name:"ডায়াবেটিক ফুট", nameEn:"Diabetic Foot", bodyPart:"foot", department:"surgery", keywords:["ডায়াবেটিক ফুট","diabetic foot","foot ulcer","পা"] },
+  { id:"dis458", name:"আঘাতজনিত ক্ষত", nameEn:"Traumatic Wound", bodyPart:"skin", department:"surgery", keywords:["আঘাতজনিত ক্ষত","traumatic wound","injury","কাটা"] },
+  { id:"dis459", name:"পোড়া ক্ষত", nameEn:"Burn Injury", bodyPart:"skin", department:"surgery", keywords:["পোড়া ক্ষত","burn injury","burn","আগুনে পোড়া"] },
+  { id:"dis460", name:"অপারেশন-পরবর্তী জটিলতা", nameEn:"Post-operative Complications", bodyPart:"general", department:"surgery", keywords:["অপারেশন-পরবর্তী জটিলতা","post-operative complications","surgery complication","operation"] },
+
+  // ── থাইরয়েড – thyroid ──
+  { id:"dis461", name:"হাইপোথাইরয়েডিজম", nameEn:"Hypothyroidism", bodyPart:"thyroid", department:"thyroid", keywords:["হাইপোথাইরয়েডিজম","hypothyroidism","low thyroid","থাইরয়েড"] },
+  { id:"dis462", name:"হাইপারথাইরয়েডিজম", nameEn:"Hyperthyroidism", bodyPart:"thyroid", department:"thyroid", keywords:["হাইপারথাইরয়েডিজম","hyperthyroidism","overactive thyroid","থাইরয়েড"] },
+  { id:"dis463", name:"গয়টার", nameEn:"Goiter", bodyPart:"thyroid", department:"thyroid", keywords:["গয়টার","goiter","thyroid enlargement","গলা ফুলে যাওয়া"] },
+  { id:"dis464", name:"থাইরয়েড নডিউল", nameEn:"Thyroid Nodule", bodyPart:"thyroid", department:"thyroid", keywords:["থাইরয়েড নডিউল","thyroid nodule","thyroid lump","নডিউল"] },
+  { id:"dis465", name:"থাইরয়েড সিস্ট", nameEn:"Thyroid Cyst", bodyPart:"thyroid", department:"thyroid", keywords:["থাইরয়েড সিস্ট","thyroid cyst","cyst","থাইরয়েড"] },
+  { id:"dis466", name:"হাশিমোটো থাইরয়ডাইটিস", nameEn:"Hashimoto's Thyroiditis", bodyPart:"thyroid", department:"thyroid", keywords:["হাশিমোটো","hashimoto","hashimoto's thyroiditis","অটোইমিউন থাইরয়েড"] },
+  { id:"dis467", name:"গ্রেভস ডিজিজ", nameEn:"Graves' Disease", bodyPart:"thyroid", department:"thyroid", keywords:["গ্রেভস ডিজিজ","graves disease","graves","হাইপারথাইরয়েড"] },
+  { id:"dis468", name:"থাইরয়েডাইটিস", nameEn:"Thyroiditis", bodyPart:"thyroid", department:"thyroid", keywords:["থাইরয়েডাইটিস","thyroiditis","থাইরয়েড প্রদাহ","thyroid inflammation"] },
+  { id:"dis469", name:"সাবঅ্যাকিউট থাইরয়ডাইটিস", nameEn:"Subacute Thyroiditis", bodyPart:"thyroid", department:"thyroid", keywords:["সাবঅ্যাকিউট থাইরয়ডাইটিস","subacute thyroiditis","de quervain thyroiditis","থাইরয়েড"] },
+  { id:"dis470", name:"পোস্টপার্টাম থাইরয়ডাইটিস", nameEn:"Postpartum Thyroiditis", bodyPart:"thyroid", department:"thyroid", keywords:["পোস্টপার্টাম থাইরয়ডাইটিস","postpartum thyroiditis","delivery","থাইরয়েড"] },
+  { id:"dis471", name:"মাল্টিনোডুলার গয়টার", nameEn:"Multinodular Goiter", bodyPart:"thyroid", department:"thyroid", keywords:["মাল্টিনোডুলার গয়টার","multinodular goiter","multiple thyroid nodules","গয়টার"] },
+  { id:"dis472", name:"টক্সিক নডুলার গয়টার", nameEn:"Toxic Nodular Goiter", bodyPart:"thyroid", department:"thyroid", keywords:["টক্সিক নডুলার গয়টার","toxic nodular goiter","toxic goiter","হাইপারথাইরয়েড"] },
+  { id:"dis473", name:"থাইরয়েড ক্যান্সার", nameEn:"Thyroid Cancer", bodyPart:"thyroid", department:"thyroid", keywords:["থাইরয়েড ক্যান্সার","thyroid cancer","cancer","থাইরয়েড"] },
+  { id:"dis474", name:"প্যাপিলারি থাইরয়েড ক্যান্সার", nameEn:"Papillary Thyroid Cancer", bodyPart:"thyroid", department:"thyroid", keywords:["প্যাপিলারি থাইরয়েড ক্যান্সার","papillary thyroid cancer","papillary carcinoma","থাইরয়েড"] },
+  { id:"dis475", name:"ফলিকুলার থাইরয়েড ক্যান্সার", nameEn:"Follicular Thyroid Cancer", bodyPart:"thyroid", department:"thyroid", keywords:["ফলিকুলার থাইরয়েড ক্যান্সার","follicular thyroid cancer","follicular carcinoma","থাইরয়েড"] },
+  { id:"dis476", name:"মেডুলারি থাইরয়েড ক্যান্সার", nameEn:"Medullary Thyroid Cancer", bodyPart:"thyroid", department:"thyroid", keywords:["মেডুলারি থাইরয়েড ক্যান্সার","medullary thyroid cancer","medullary carcinoma","থাইরয়েড"] },
+  { id:"dis477", name:"অ্যানাপ্লাস্টিক থাইরয়েড ক্যান্সার", nameEn:"Anaplastic Thyroid Cancer", bodyPart:"thyroid", department:"thyroid", keywords:["অ্যানাপ্লাস্টিক থাইরয়েড ক্যান্সার","anaplastic thyroid cancer","anaplastic carcinoma","থাইরয়েড"] },
+  { id:"dis478", name:"থাইরয়েড হরমোনের ভারসাম্যহীনতা", nameEn:"Thyroid Hormone Imbalance", bodyPart:"thyroid", department:"thyroid", keywords:["থাইরয়েড হরমোন","thyroid hormone imbalance","T3","T4","TSH"] },
+  { id:"dis479", name:"জন্মগত থাইরয়েড রোগ", nameEn:"Congenital Hypothyroidism", bodyPart:"thyroid", department:"thyroid", keywords:["জন্মগত থাইরয়েড","congenital hypothyroidism","newborn thyroid","শিশুর থাইরয়েড"] },
+  { id:"dis480", name:"থাইরয়েডের বৃদ্ধি", nameEn:"Thyroid Enlargement", bodyPart:"thyroid", department:"thyroid", keywords:["থাইরয়েডের বৃদ্ধি","thyroid enlargement","enlarged thyroid","গলা ফুলে যাওয়া"] },
+
+  // ── শিশু সার্জারি – child-surgery ──
+  { id:"dis481", name:"জন্মগত হার্নিয়া", nameEn:"Congenital Hernia", bodyPart:"child-surgery", department:"child-surgery", keywords:["জন্মগত হার্নিয়া","congenital hernia","hernia","শিশু"] },
+  { id:"dis482", name:"ইনগুইনাল হার্নিয়া", nameEn:"Inguinal Hernia", bodyPart:"child-surgery", department:"child-surgery", keywords:["ইনগুইনাল হার্নিয়া","inguinal hernia","groin","হার্নিয়া"] },
+  { id:"dis483", name:"নাভির হার্নিয়া", nameEn:"Umbilical Hernia", bodyPart:"child-surgery", department:"child-surgery", keywords:["নাভির হার্নিয়া","umbilical hernia","নাভি","হার্নিয়া"] },
+  { id:"dis484", name:"হাইড্রোসিল", nameEn:"Hydrocele", bodyPart:"child-surgery", department:"child-surgery", keywords:["হাইড্রোসিল","hydrocele","অণ্ডথলি","শিশু"] },
+  { id:"dis485", name:"অবতরণ না করা অণ্ডকোষ", nameEn:"Undescended Testis (Cryptorchidism)", bodyPart:"child-surgery", department:"child-surgery", keywords:["অবতরণ না করা অণ্ডকোষ","undescended testis","cryptorchidism","অণ্ডকোষ"] },
+  { id:"dis486", name:"ইনগুইনাল অণ্ডকোষ", nameEn:"Retractile Testis", bodyPart:"child-surgery", department:"child-surgery", keywords:["ইনগুইনাল অণ্ডকোষ","retractile testis","অণ্ডকোষ","শিশু"] },
+  { id:"dis487", name:"হাইপোস্প্যাডিয়াস", nameEn:"Hypospadias", bodyPart:"child-surgery", department:"child-surgery", keywords:["হাইপোস্প্যাডিয়াস","hypospadias","মূত্রনালি","লিঙ্গ"] },
+  { id:"dis488", name:"এপিসপ্যাডিয়াস", nameEn:"Epispadias", bodyPart:"child-surgery", department:"child-surgery", keywords:["এপিসপ্যাডিয়াস","epispadias","মূত্রনালি","লিঙ্গ"] },
+  { id:"dis489", name:"ফিমোসিস", nameEn:"Phimosis", bodyPart:"child-surgery", department:"child-surgery", keywords:["ফিমোসিস","phimosis","খৎনা","লিঙ্গ"] },
+  { id:"dis490", name:"প্যারাফিমোসিস", nameEn:"Paraphimosis", bodyPart:"child-surgery", department:"child-surgery", keywords:["প্যারাফিমোসিস","paraphimosis","লিঙ্গ","ফোরস্কিন"] },
+  { id:"dis491", name:"অ্যাপেন্ডিসাইটিস", nameEn:"Appendicitis", bodyPart:"child-surgery", department:"child-surgery", keywords:["অ্যাপেন্ডিসাইটিস","appendicitis","appendix","তলপেট"] },
+  { id:"dis492", name:"অন্ত্রে বাধা", nameEn:"Intestinal Obstruction", bodyPart:"child-surgery", department:"child-surgery", keywords:["অন্ত্রে বাধা","intestinal obstruction","bowel obstruction","অন্ত্র"] },
+  { id:"dis493", name:"ইনটাসাসসেপশন", nameEn:"Intussusception", bodyPart:"child-surgery", department:"child-surgery", keywords:["ইনটাসাসসেপশন","intussusception","অন্ত্র","শিশু"] },
+  { id:"dis494", name:"পাইলোরিক স্টেনোসিস", nameEn:"Pyloric Stenosis", bodyPart:"child-surgery", department:"child-surgery", keywords:["পাইলোরিক স্টেনোসিস","pyloric stenosis","বমি","পাকস্থলী"] },
+  { id:"dis495", name:"হির্শস্প্রুং রোগ", nameEn:"Hirschsprung Disease", bodyPart:"child-surgery", department:"child-surgery", keywords:["হির্শস্প্রুং","hirschsprung disease","কোষ্ঠকাঠিন্য","কোলন"] },
+  { id:"dis496", name:"অ্যানোরেক্টাল ম্যালফরমেশন", nameEn:"Anorectal Malformation", bodyPart:"child-surgery", department:"child-surgery", keywords:["অ্যানোরেক্টাল ম্যালফরমেশন","anorectal malformation","মলদ্বার","জন্মগত"] },
+  { id:"dis497", name:"ট্র্যাকিওইসোফেজিয়াল ফিস্টুলা", nameEn:"Tracheoesophageal Fistula", bodyPart:"child-surgery", department:"child-surgery", keywords:["ট্র্যাকিওইসোফেজিয়াল ফিস্টুলা","tracheoesophageal fistula","TEF","খাদ্যনালী"] },
+  { id:"dis498", name:"ইসোফেজিয়াল অ্যাট্রেসিয়া", nameEn:"Esophageal Atresia", bodyPart:"child-surgery", department:"child-surgery", keywords:["ইসোফেজিয়াল অ্যাট্রেসিয়া","esophageal atresia","খাদ্যনালী","জন্মগত"] },
+  { id:"dis499", name:"জন্মগত ডায়াফ্রাম্যাটিক হার্নিয়া", nameEn:"Congenital Diaphragmatic Hernia", bodyPart:"child-surgery", department:"child-surgery", keywords:["ডায়াফ্রাম্যাটিক হার্নিয়া","congenital diaphragmatic hernia","ডায়াফ্রাম","CDH"] },
+  { id:"dis500", name:"ওমফালোসিল", nameEn:"Omphalocele", bodyPart:"child-surgery", department:"child-surgery", keywords:["ওমফালোসিল","omphalocele","জন্মগত","পেট"] },
+  { id:"dis501", name:"গ্যাস্ট্রোস্কিসিস", nameEn:"Gastroschisis", bodyPart:"child-surgery", department:"child-surgery", keywords:["গ্যাস্ট্রোস্কিসিস","gastroschisis","জন্মগত","পেট"] },
+  { id:"dis502", name:"শিশুদের নরম টিস্যুর টিউমার", nameEn:"Pediatric Soft Tissue Tumor", bodyPart:"child-surgery", department:"child-surgery", keywords:["শিশুদের নরম টিস্যুর টিউমার","pediatric soft tissue tumor","soft tissue","tumor"] },
+  { id:"dis503", name:"উইলমস টিউমার", nameEn:"Wilms Tumor", bodyPart:"child-surgery", department:"child-surgery", keywords:["উইলমস টিউমার","wilms tumor","কিডনি","শিশু"] },
+  { id:"dis504", name:"নিউরোব্লাস্টোমা", nameEn:"Neuroblastoma", bodyPart:"child-surgery", department:"child-surgery", keywords:["নিউরোব্লাস্টোমা","neuroblastoma","adrenal","tumor"] },
+  { id:"dis505", name:"লিম্ফ্যাঙ্গিওমা", nameEn:"Lymphangioma", bodyPart:"child-surgery", department:"child-surgery", keywords:["লিম্ফ্যাঙ্গিওমা","lymphangioma","lymph","tumor"] },
+  { id:"dis506", name:"হেম্যানজিওমা", nameEn:"Hemangioma", bodyPart:"child-surgery", department:"child-surgery", keywords:["হেম্যানজিওমা","hemangioma","রক্তনালী","জন্মদাগ"] },
+  { id:"dis507", name:"থাইরোগ্লোসাল সিস্ট", nameEn:"Thyroglossal Cyst", bodyPart:"child-surgery", department:"child-surgery", keywords:["থাইরোগ্লোসাল সিস্ট","thyroglossal cyst","গলা","সিস্ট"] },
+  { id:"dis508", name:"ব্র্যাঙ্কিয়াল ক্লেফট সিস্ট", nameEn:"Branchial Cleft Cyst", bodyPart:"child-surgery", department:"child-surgery", keywords:["ব্র্যাঙ্কিয়াল ক্লেফট সিস্ট","branchial cleft cyst","গলা","সিস্ট"] },
+  { id:"dis509", name:"পোড়া ক্ষত", nameEn:"Burn Injury", bodyPart:"child-surgery", department:"child-surgery", keywords:["পোড়া ক্ষত","burn injury","burn","দগ্ধ"] },
+  { id:"dis510", name:"জন্মগত ত্রুটি সংশোধন", nameEn:"Congenital Surgical Anomalies", bodyPart:"child-surgery", department:"child-surgery", keywords:["জন্মগত ত্রুটি","congenital surgical anomalies","birth defect","শিশু সার্জারি"] },
+];
+
+// ─────────────────────────────────────────────
+//  BODY PARTS
+// ─────────────────────────────────────────────
+const BODY_PARTS = [
+  { id:"brain",  name:"মস্তিষ্ক", icon:"icon/brain.png",    departments:["neuro"]  },
+  { id:"ear",    name:"কান",      icon:"icon/ear.png",      departments:["ent"]    },
+  { id:"nose",   name:"নাক",      icon:"icon/nose.png",     departments:["ent"]    },
+  { id:"mouth",  name:"মুখ",      icon:"icon/mouth.png",    departments:["dental","ent"] },
+  { id:"teeth",  name:"দাঁত",     icon:"icon/tooth.png",    departments:["dental"] },
+  { id:"throat", name:"গলা",      icon:"icon/sore.png",   departments:["ent"]    },
+  { id:"thyroid",name:"থাইরয়েড", icon:"icon/endocrine.png",  departments:["thyroid","endo"] },
+  { id:"heart",  name:"হৃদরোগ",   icon:"icon/cardiology.png",    departments:["cardio"] },
+  { id:"lung",   name:"ফুসফুস",   icon:"icon/lungs.png",     departments:["pulmo"]  },
+  { id:"liver",  name:"লিভার",    icon:"icon/liver.png",    departments:["hepato","gastro"] },
+  { id:"stomach",name:"পাকস্থলী", icon:"icon/gastroenterology.png",  departments:["gastro"] },
+  { id:"intestine",name:"অন্ত্র", icon:"icon/bowels.png",departments:["gastro"] },
+  { id:"kidney", name:"কিডনি",    icon:"icon/kidney.png",   departments:["nephro","uro"] },
+  { id:"urinary",name:"মূত্রনালী", icon:"icon/urology.png",  departments:["nephro","uro"] },
+  { id:"male",   name:"পুরুষ প্রজনন", icon:"icon/male.png", departments:["uro"]    },
+  { id:"female", name:"মহিলা প্রজনন",icon:"icon/female.png",departments:["gynae"]  },
+  { id:"skin",   name:"ত্বক / চামড়া",icon:"icon/skin.png", departments:["dermo"]  },
+  { id:"bone",   name:"হাড় / জয়েন্ট",icon:"icon/bone.png",departments:["ortho"]  },
+  { id:"hand",   name:"হাত / কাঁধ",  icon:"icon/shoulder.png", departments:["ortho"]  },
+  { id:"leg",    name:"পা / হাঁটু",   icon:"icon/ortho.png",  departments:["ortho"]  },
+  { id:"foot",   name:"পায়ের পাতা",  icon:"icon/foot.png", departments:["ortho"]  },
+  { id:"mental", name:"মানসিক স্বাস্থ্য",icon:"icon/psychiatry.png",departments:["psychiatry"] },
+  { id:"general",name:"সাধারণ রোগ",  icon:"icon/medicine.png",departments:["medicine","endo"] },
+  { id:"children",name:"শিশু স্বাস্থ্য",icon:"icon/pediatrics.png",departments:["pediatric"] },
+];
+
+// ─────────────────────────────────────────────
+//  HOSPITAL TESTS (সকল পরীক্ষা ও মূল্য তালিকা)
+// ─────────────────────────────────────────────
+const HOSPITAL_TESTS = [
+  // ── রক্ত পরীক্ষা ──
+  { category: "রক্ত পরীক্ষা", name: "CBC (Complete Blood Count)",        price: "৩৫০" },
+  { category: "রক্ত পরীক্ষা", name: "ব্লাড গ্রুপিং",                    price: "১৫০" },
+  { category: "রক্ত পরীক্ষা", name: "ব্লাড সুগার (ফাস্টিং)",            price: "১৫০" },
+  { category: "রক্ত পরীক্ষা", name: "ব্লাড সুগার (র‍্যান্ডম)",          price: "১৫০" },
+  { category: "রক্ত পরীক্ষা", name: "HbA1c",                            price: "৬৫০" },
+  { category: "রক্ত পরীক্ষা", name: "সিরাম ক্রিয়েটিনিন",               price: "৩০০" },
+  { category: "রক্ত পরীক্ষা", name: "সিরাম ইউরিক অ্যাসিড",             price: "৩০০" },
+  { category: "রক্ত পরীক্ষা", name: "লিপিড প্রোফাইল",                   price: "৬০০" },
+  { category: "রক্ত পরীক্ষা", name: "লিভার ফাংশন টেস্ট (LFT)",         price: "৭০০" },
+  { category: "রক্ত পরীক্ষা", name: "থাইরয়েড ফাংশন (T3, T4, TSH)",    price: "৮৫০" },
+  { category: "রক্ত পরীক্ষা", name: "ম্যালেরিয়া পরীক্ষা",              price: "২০০" },
+  { category: "রক্ত পরীক্ষা", name: "ডেঙ্গু NS1 অ্যান্টিজেন",          price: "৫০০" },
+  { category: "রক্ত পরীক্ষা", name: "Widal Test",                       price: "২৫০" },
+  { category: "রক্ত পরীক্ষা", name: "CRP (C-Reactive Protein)",         price: "৪০০" },
+  { category: "রক্ত পরীক্ষা", name: "ESR",                              price: "১৫০" },
+
+  // ── প্রস্রাব পরীক্ষা ──
+  { category: "প্রস্রাব পরীক্ষা", name: "Urine R/E",                    price: "১৫০" },
+  { category: "প্রস্রাব পরীক্ষা", name: "Urine Culture & Sensitivity",  price: "৬০০" },
+  { category: "প্রস্রাব পরীক্ষা", name: "24 ঘণ্টা প্রস্রাব প্রোটিন",  price: "৩০০" },
+
+  // ── ইমেজিং ──
+  { category: "ইমেজিং",  name: "X-Ray (বুক)",                           price: "৩০০" },
+  { category: "ইমেজিং",  name: "X-Ray (হাত/পা/মেরুদণ্ড)",              price: "৩০০" },
+  { category: "ইমেজিং",  name: "আল্ট্রাসনোগ্রাম (পেট)",                price: "৮০০" },
+  { category: "ইমেজিং",  name: "আল্ট্রাসনোগ্রাম (থাইরয়েড)",           price: "৮০০" },
+  { category: "ইমেজিং",  name: "আল্ট্রাসনোগ্রাম (কিডনি)",              price: "৮০০" },
+  { category: "ইমেজিং",  name: "ইকোকার্ডিওগ্রাম (Echo)",               price: "২০০০" },
+  { category: "ইমেজিং",  name: "CT Scan (মাথা)",                        price: "৩৫০০" },
+  { category: "ইমেজিং",  name: "CT Scan (বুক)",                         price: "৪০০০" },
+  { category: "ইমেজিং",  name: "MRI (মাথা/মেরুদণ্ড)",                  price: "৫০০০" },
+
+  // ── হৃদরোগ ──
+  { category: "হৃদরোগ পরীক্ষা", name: "ECG",                            price: "২০০" },
+  { category: "হৃদরোগ পরীক্ষা", name: "Troponin I",                     price: "৮০০" },
+  { category: "হৃদরোগ পরীক্ষা", name: "ProBNP",                         price: "১৫০০" },
+
+  // ── হরমোন ──
+  { category: "হরমোন পরীক্ষা", name: "FSH / LH",                        price: "৬০০" },
+  { category: "হরমোন পরীক্ষা", name: "Prolactin",                        price: "৫০০" },
+  { category: "হরমোন পরীক্ষা", name: "Testosterone",                     price: "৬০০" },
+  { category: "হরমোন পরীক্ষা", name: "Cortisol",                         price: "৭০০" },
+
+  // ── মল পরীক্ষা ──
+  { category: "মল পরীক্ষা", name: "Stool R/E",                          price: "১৫০" },
+  { category: "মল পরীক্ষা", name: "Stool Culture",                       price: "৫০০" },
+  { category: "মল পরীক্ষা", name: "H. Pylori Antigen (Stool)",          price: "৬০০" },
+
+  // ── অন্যান্য ──
+  { category: "অন্যান্য", name: "COVID-19 Antigen Test",                 price: "৫০০" },
+  { category: "অন্যান্য", name: "Pregnancy Test (Serum)",                price: "৩০০" },
+  { category: "অন্যান্য", name: "Hepatitis B Surface Antigen",           price: "৪০০" },
+  { category: "অন্যান্য", name: "Anti-HCV",                              price: "৫০০" },
+  { category: "অন্যান্য", name: "HIV Screening",                         price: "৪০০" },
+];
+// ─────────────────────────────────────────────
+//  HELPER LOOKUP MAPS (generated at runtime)
+// ─────────────────────────────────────────────
+function buildLookups() {
+  const deptMap   = {};  // id → dept object
+  const doctorMap = {};  // id → doctor object
+  const diseaseMap= {};  // id → disease object
+  const partMap   = {};  // id → body part object
+
+  DEPARTMENTS.forEach(d => deptMap[d.id]    = d);
+  DOCTORS.forEach(d     => doctorMap[d.id]  = d);
+  DISEASES.forEach(d    => diseaseMap[d.id] = d);
+  BODY_PARTS.forEach(b  => partMap[b.id]    = b);
+
+  // diseases by department
+  const diseasesByDept = {};
+  DISEASES.forEach(d => {
+    if (!diseasesByDept[d.department]) diseasesByDept[d.department] = [];
+    diseasesByDept[d.department].push(d);
+  });
+
+  // doctors by department
+  const doctorsByDept = {};
+DOCTORS.forEach(d => {
+  const depts = Array.isArray(d.departments) ? d.departments : [d.departments];
+  depts.forEach(did => {
+    if (!doctorsByDept[did]) doctorsByDept[did] = [];
+    doctorsByDept[did].push(d);
+  });
+});
+
+  // diseases by body part
+  const diseasesByPart = {};
+  DISEASES.forEach(d => {
+    if (!diseasesByPart[d.bodyPart]) diseasesByPart[d.bodyPart] = [];
+    diseasesByPart[d.bodyPart].push(d);
+  });
+
+  return { deptMap, doctorMap, diseaseMap, partMap, diseasesByDept, doctorsByDept, diseasesByPart };
+}
