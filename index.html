@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="bn" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="জামালপুর সেন্ট্রাল হাসপাতাল — রোগ অনুযায়ী সঠিক ডাক্তার খুঁজুন" />
+  <meta name="theme-color" content="#1a4a8a" />
+
+  <title>JCHL | রোগ অনুযায়ী সঠিক ডাক্তার খুঁজুন</title>
+
+  <!-- Favicon inline SVG -->
+  <link rel="icon" type="image/png" href="assests/hospital_building.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ══════════════════════════════════════════
+       HEADER
+  ══════════════════════════════════════════ -->
+  <header id="header" role="banner">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <div class="logo-wrap">
+        <div class="logo-icon" role="img" aria-label="JCHL Logo">
+  <img 
+    src="assests/hospital_logo.png" 
+    alt="জামালপুর সেন্ট্রাল হাসপাতাল" 
+    style="width:100%;height:100%;object-fit:contain;border-radius:50%"
+    onerror="this.parentElement.innerHTML='🏥'"
+  />
+</div>
+        <div class="logo-text">
+          <div class="hospital-name">জামালপুর সেন্ট্রাল হাসপাতাল লিমিটেড</div>
+          <div class="hospital-sub">রোগ অনুযায়ী সঠিক ডাক্তার খুঁজুন</div>
+        </div>
+      </div>
+
+      <!-- Search Box -->
+      <div class="search-wrap" role="search">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input
+          type="search"
+          id="search-input"
+          placeholder="রোগ, ডাক্তার বা বিভাগ লিখুন…"
+          autocomplete="off"
+          aria-label="রোগ বা ডাক্তার খুঁজুন"
+          spellcheck="false"
+        />
+        <button class="search-clear" id="search-clear" aria-label="পরিষ্কার করুন">✕</button>
+        <!-- Search Dropdown -->
+        <div id="search-results" role="listbox" aria-label="অনুসন্ধান ফলাফল"></div>
+      </div>
+
+      <!-- Tests Button -->
+      <button id="tests-btn" class="tests-header-btn" onclick="openTestsPanel()">
+        🧪 টেস্টসমূহ
+      </button>
+
+      <!-- Emergency Badge -->
+      <div class="header-right">
+        <div class="" title="">
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       TESTS PANEL OVERLAY
+  ══════════════════════════════════════════ -->
+  <div id="tests-overlay" role="dialog" aria-modal="true" aria-label="টেস্টসমূহ">
+    <div id="tests-panel">
+      <div class="tp-header">
+        <div>
+          <div class="tp-title">🧪 টেস্টসমূহ ও মূল্য তালিকা</div>
+        </div>
+        <button class="tp-close" onclick="closeTestsPanel()">✕</button>
+      </div>
+      <div class="tp-search-wrap">
+        <input type="search" id="tests-search" placeholder="টেস্টের নাম লিখুন…" oninput="filterTests(this.value)" />
+      </div>
+      <div id="tests-body">
+        <!-- Populated by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       MAIN LAYOUT
+  ══════════════════════════════════════════ -->
+  <main id="main-layout" role="main">
+
+    <!-- ── LEFT: Body Parts Sidebar ── -->
+    <aside id="body-sidebar" role="navigation" aria-label="শরীরের অংশ">
+      <div class="sidebar-header">
+        🧍‍♂️ শরীরের অংশ নির্বাচন করুন
+      </div>
+      <div class="body-parts-grid" id="body-parts-grid" role="list">
+        <!-- Populated by script.js -->
+      </div>
+    </aside>
+
+    <!-- ── RIGHT: Content Area ── -->
+    <section id="content-area" aria-label="তথ্য প্যানেল">
+
+      <!-- Stats bar -->
+      <div id="stats-bar" role="region" aria-label="পরিসংখ্যান">
+        <!-- Populated by script.js -->
+      </div>
+
+      <!-- Quick Department Categories -->
+      <div id="quick-cats" role="region" aria-label="বিভাগসমূহ">
+        <div class="section-title">🏬 বিভাগ অনুযায়ী খুঁজুন</div>
+        <div class="cats-grid" id="quick-cats-inner">
+          <!-- Populated by script.js -->
+        </div>
+      </div>
+
+      <!-- Welcome State (shown by default) -->
+      <div id="welcome-state" role="region" aria-label="স্বাগত বার্তা">
+        <div class="ws-icon" aria-hidden="true">🩺</div>
+        <h1 class="ws-title">স্বাগতম!</h1>
+        <p class="ws-sub">
+          শরীরের কোনো অংশে সমস্যা? বাম দিক থেকে অংশ নির্বাচন করুন অথবা<br/>
+          উপরের সার্চ বক্সে রোগের নাম লিখুন।
+        </p>
+        <div class="ws-hint-row">
+          <div class="ws-hint">
+            <div class="ws-hint-icon">👆</div>
+            <div class="ws-hint-text">শরীরের অংশ চাপুন</div>
+          </div>
+          <div class="ws-hint">
+            <div class="ws-hint-icon">🔍</div>
+            <div class="ws-hint-text">রোগের নাম লিখুন</div>
+          </div>
+          <div class="ws-hint">
+            <div class="ws-hint-icon">🩺</div>
+            <div class="ws-hint-text">ডাক্তার খুঁজুন</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Information Panel (body part / department info + diseases) -->
+      <div id="info-panel" role="region" aria-label="তথ্য প্যানেল">
+        <!-- Populated dynamically -->
+      </div>
+
+      <!-- Disease Detail Panel -->
+      <div id="disease-detail" role="region" aria-label="রোগের বিবরণ">
+        <!-- Populated dynamically -->
+      </div>
+
+      <!-- Doctor Panel -->
+      <div id="doctor-panel" role="region" aria-label="ডাক্তার তালিকা">
+        <!-- Populated dynamically -->
+      </div>
+
+    </section><!-- /content-area -->
+  </main><!-- /main-layout -->
+
+  <!-- ══════════════════════════════════════════
+       DOCTOR PROFILE MODAL
+  ══════════════════════════════════════════ -->
+  <div id="profile-overlay" role="dialog" aria-modal="true" aria-label="ডাক্তারের প্রোফাইল">
+    <div id="profile-modal">
+      <!-- Populated dynamically -->
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer id="footer" role="contentinfo">
+    <div class="footer-content">
+      
+      <div class="footer-links">
+          <a href="#">A Touch of Care in Healthcare</a>
+      </div>
+
+        <p class="copyright">
+            Copyright © 2026, Jamalpur Central Hospital Limited | All Rights Reserved
+        </p>
+
+
+    </div>
+  </footer>
+
+  <!-- ── Scripts ── -->
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
