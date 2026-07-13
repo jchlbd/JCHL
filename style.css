@@ -852,12 +852,12 @@ ul, ol { list-style: none; }
 /* Mobile */
 @media (max-width: 480px) {
   :root { --header-h: 60px; }
-  .header-inner { gap: 6px; padding: 0 10px; }
+  .header-inner { gap: 8px; padding: 0 10px; }
   .logo-icon { width: 36px; height: 36px; flex-shrink: 0; }
-  .logo-text .hospital-name { font-size: 11px; white-space: normal; line-height: 1.3; word-break: keep-all; overflow-wrap: anywhere; }
-  .logo-text .hospital-sub { display: none; }
-  /* search bar — flex shrink করবে যাতে button এ জায়গা হয় */
-  .search-wrap { min-width: 0; flex: 1; margin: 0; }
+  /* mobile তে শুধু logo icon থাকবে, text লুকানো */
+  .logo-text { display: none; }
+  /* search bar — logo text লুকানোর পরে বাড়তি জায়গা নেবে */
+  .search-wrap { min-width: 0; flex: 1; margin: 0; max-width: none; }
   /* tests button — সম্পূর্ণ দেখাবে, shrink হবে না */
   .tests-header-btn { padding: 6px 10px; font-size: 12px; flex-shrink: 0; white-space: nowrap; }
   #main-layout { padding: 10px 10px 30px; }
@@ -872,14 +872,6 @@ ul, ol { list-style: none; }
   #tests-panel { max-width: 100%; }
   .cats-grid { gap: 6px; }
   .cat-chip { font-size: 12px; padding: 5px 10px; }
-}
-
-/* PC তে br লুকানো */
-.mob-br { display: none; }
-
-/* Mobile এ br দেখাবে */
-@media (max-width: 768px) {
-  .mob-br { display: block; }
 }
 
 /* ── TESTS TABLE (Doctor Profile Modal) ─────────────────── */
