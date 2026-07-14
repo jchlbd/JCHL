@@ -49,7 +49,7 @@ const DOCTORS = [
   name: "অধ্যাপক ডাঃ খাজা মাসুম কবীর",
   photo: "assests/d01.png",
   designation: "প্রফেসর (সার্জারি)",
-  departments: "surgery",
+  departments: ["surgery", "uro"],
   degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য), এফসিপিএস (সার্জারি)
 এমএস (ইউরোলজি)
 অধ্যাপক (সার্জাারি)
@@ -367,7 +367,7 @@ const DOCTORS = [
     "dis349", "dis350", "dis351", "dis352", "dis353", "dis354", "dis355", "dis356", "dis357", "dis358", "dis359", "dis360", "dis361", "dis362", "dis363", "dis364", "dis365", "dis366", "dis367", "dis368", "dis369", "dis370", "dis371", "dis372", "dis373", "dis374", "dis375", "dis376", "dis377", "dis378"],
   schedule: [
     { day: "শনি - বৃহস্পতিবার", time: "সন্ধ্যা ৭ টা – রাত ৯ টা পর্যন্ত" },
-    { day: "শুক্রবার", time: "বিকাল ৫ টা – রাত ৮ টা পর্যন্ত" }
+    { day: "শুক্রবার", time: "বিকাল ৬ টা – রাত ৮ টা পর্যন্ত" }
   ],
   chamber: "৫০১",
   visitFee: {
