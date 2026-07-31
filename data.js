@@ -23,6 +23,7 @@ const DEPARTMENTS = [
   { id: "pulmo",       name: "বক্ষব্যাধি",       icon: "" },
   { id: "gastro",      name: "গ্যাস্ট্রোএন্টারোলজি",   icon: "" },
   { id: "hepato",      name: "হেপাটোলজি (লিভার)",     icon: "" },
+  { id: "reumato",      name: "রিউম্যাটোলজি",     icon: "" },
   { id: "nephro",      name: "নেফ্রোলজি (কিডনি)",     icon: "" },
   { id: "uro",         name: "ইউরোলজি",               icon: "" },
   { id: "gynae",       name: "স্ত্রীরোগ ও প্রসূতি",    icon: "" },
@@ -862,6 +863,29 @@ tests: [
     { day: "বৃহস্পতিবার", time: "দুপুর ৩ টা – সন্ধ্যা ৭ টা পর্যন্ত" }
   ],
   chamber: "২১০",
+  visitFee: {
+  new: "৭০০",
+  old: "৫০০",
+  note: "বি: দ্র: ৩ মাস পর পুরাতন রোগী নতুন হিসেবে গণ্য হবে।"
+},
+},
+
+{
+  id: "d31",
+  name: "ডাঃ ফেরদৌসুর রহমান আল-মাহমুদ",
+  photo: "assests/d31.png",
+  designation: "সহযোগী অধ্যাপক",
+  departments: "reumato",
+  degrees: `এমবিবিএস, বিসিএস (স্বাস্থ্য)
+এফসিপিএস (ফিজিক্যাল মেডিসিন)
+সহযোগী অধ্যাপক
+টাঙ্গাইল মেডিকেল কলেজ ও হাসপাতাল`,
+  diseases: [
+    ],
+  schedule: [
+    { day: "বুধবার", time: "বিকাল ৩ টা – সন্ধ্যা ৭ টা পর্যন্ত" }
+  ],
+  chamber: "২০১",
   visitFee: {
   new: "৭০০",
   old: "৫০০",
